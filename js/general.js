@@ -1,6 +1,6 @@
-var jq3 = jQuery.noConflict(true);
+// var jq3 = jQuery.noConflict(true);
 
-jq3(() => { //wait for DOM load
+$(() => { //wait for DOM load
     const dropdowns = document.getElementsByClassName("sub-menu");
     const container = document.getElementById("container");
     const navbar = document.getElementById("navbar");
@@ -13,12 +13,12 @@ jq3(() => { //wait for DOM load
         navbar.removeAttribute("style");
     }
 
-    jq3(window).on("click", event => {
+    $(window).on("click", event => {
         if (event.type == "touchstart") {
-            jq3(this).off('click')
+            $(this).off('click')
         }
         let target = event.target.parentNode;
-        if (jq3(window).width() > 800) {
+        if ($(window).width() > 800) {
             hidedropdowns();
         }
         if (target.matches('.menu-item-has-children')) {
