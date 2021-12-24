@@ -1,4 +1,4 @@
-// var jq3 = jQuery.noConflict(true);
+// var $ = jQuery.noConflict(true);
 
 $(() => { //wait for DOM load
     const dropdowns = document.getElementsByClassName("sub-menu");
@@ -28,5 +28,32 @@ $(() => { //wait for DOM load
         } else {
             hidedropdowns();
         }
+    });
+
+
+    $('#topBtn').click(() => {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 500);
+    });
+
+    let currentScrollPos = window.pageYOffset
+    let prevScrollpos = currentScrollPos
+    $(window).scroll(() => {
+        if ($(this).scrollTop() > 400) {
+            $('#topBtn').fadeIn();
+        } else {
+            $('#topBtn').fadeOut();
+        }
+
+        //common variable
+        currentScrollPos = window.pageYOffset
+        //scroll down hide navbar
+        // if (prevScrollpos > currentScrollPos) {
+        //     $('#navbar').css('visibility', 'visible');
+        // } else {
+        //     $('#navbar').css('visibility', 'hidden');
+        // }
+        prevScrollpos = currentScrollPos
     });
 });
