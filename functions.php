@@ -8,6 +8,7 @@ require get_template_directory() . '/include/disable_wp-emoji.php';
 require get_template_directory() . '/include/disable_wp-embed.php';
 require get_template_directory() . '/include/load_css_js.php';
 require get_template_directory() . '/include/restrict_restapi.php';
+require get_template_directory() . '/include/modify_post_content.php';
 
 
 add_theme_support('menus');

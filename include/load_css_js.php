@@ -13,5 +13,9 @@ function theme_css_js() {
         wp_enqueue_script('jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', false, null);
     /* general script */
         wp_enqueue_script('general-js', get_template_directory_uri().'/js/general.js', 'jQuery', false, null);
+    if(is_single()) {
+    /* post style */
+        wp_enqueue_style('single', get_template_directory_uri().'/css/single.css', 'font', '2021122400', 'screen');        
+    }
 }
 add_action('wp_enqueue_scripts', 'theme_css_js');
