@@ -17,12 +17,12 @@
                 $link = wp_get_attachment_caption($slide);
                 if($link === ''):
 ?>
-            <img src="<?= wp_get_attachment_image_url($slide, 'large'); ?>" />
+            <img src="<?php echo wp_get_attachment_image_url($slide, 'large'); ?>" />
 <?php
                 else:
 ?>
-            <a href="<?= $link; ?>">
-                <img src="<?= wp_get_attachment_image_url($slide, 'large'); ?>" />
+            <a href="<?php echo $link; ?>">
+                <img src="<?php echo wp_get_attachment_image_url($slide, 'large'); ?>" />
             </a>
 <?php
                 endif;
@@ -36,3 +36,73 @@
     </div>
 
 </div>
+
+<style>
+    .gallery {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 60vw;
+        margin-left: 20%;
+    }
+
+    .gallery_content {
+        width: 100%;
+        height: 30vw;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .gallery .owl-item {
+        width: 100%;
+        height: 30vw;
+        position: relative;
+    }
+
+    .gallery .owl-item img {
+        width: 100%;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Mobile Style */
+    @media only screen and (max-width: 768px) {
+
+        .gallery_prev,
+        .gallery_next {
+            display: none;
+        }
+
+    }
+
+    /* Desktop Style */
+    @media screen and (min-width: 769px) {
+
+        .gallery_prev,
+        .gallery_next {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        .gallery_prev {
+            left: -1rem;
+        }
+
+        .gallery_next {
+            right: -1rem;
+        }
+
+        .gallery_next img,
+        .gallery_prev img {
+            width: 35px;
+            height: 35px;
+        }
+
+    }
+</style>
