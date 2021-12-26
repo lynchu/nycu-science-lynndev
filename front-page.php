@@ -29,7 +29,7 @@
 
     .navcard_container {
         width: 75%;
-        margin: 10vw 12.5%;
+        margin: 5vw 12.5%;
         display: flex;
         justify-content: space-between;
     }
@@ -78,6 +78,7 @@
 
     .post_title {
         font-weight: bold;
+        font-size: 1.2rem;
     }
 
     .category_name {
