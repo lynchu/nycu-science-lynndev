@@ -1,6 +1,6 @@
-var jq3 = jQuery.noConflict(true);
+// var $ = jQuery.noConflict(true);
 
-jq3(() => { //wait for DOM load
+$(() => { //wait for DOM load
     const dropdowns = document.getElementsByClassName("sub-menu");
     const container = document.getElementById("container");
     const navbar = document.getElementById("navbar");
@@ -13,12 +13,12 @@ jq3(() => { //wait for DOM load
         navbar.removeAttribute("style");
     }
 
-    jq3(window).on("click", event => {
+    $(window).on("click", event => {
         if (event.type == "touchstart") {
-            jq3(this).off('click')
+            $(this).off('click')
         }
         let target = event.target.parentNode;
-        if (jq3(window).width() > 800) {
+        if ($(window).width() > 800) {
             hidedropdowns();
         }
         if (target.matches('.menu-item-has-children')) {
@@ -28,5 +28,32 @@ jq3(() => { //wait for DOM load
         } else {
             hidedropdowns();
         }
+    });
+
+
+    $('#topBtn').click(() => {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 500);
+    });
+
+    let currentScrollPos = window.pageYOffset
+    let prevScrollpos = currentScrollPos
+    $(window).scroll(() => {
+        if ($(this).scrollTop() > 400) {
+            $('#topBtn').fadeIn();
+        } else {
+            $('#topBtn').fadeOut();
+        }
+
+        //common variable
+        currentScrollPos = window.pageYOffset
+        //scroll down hide navbar
+        // if (prevScrollpos > currentScrollPos) {
+        //     $('#navbar').css('visibility', 'visible');
+        // } else {
+        //     $('#navbar').css('visibility', 'hidden');
+        // }
+        prevScrollpos = currentScrollPos
     });
 });

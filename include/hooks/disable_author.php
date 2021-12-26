@@ -1,4 +1,5 @@
 <?php
+
 // disable author page access
 function oc_author_page_redirect() {
     if ( is_author() ) {
