@@ -56,4 +56,7 @@ $(() => { //wait for DOM load
         // }
         prevScrollpos = currentScrollPos
     });
+
+    $('#single_cat_title>ul>li>a').remove();
+    
 });
