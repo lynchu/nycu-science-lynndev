@@ -22,6 +22,7 @@
 
 
                     <?php wp_nav_menu(); ?>
+                    <div id="blocker"></div>
                 </nav>
             </header>
             <main>
