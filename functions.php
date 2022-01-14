@@ -10,6 +10,8 @@ require get_template_directory() . '/include/hooks/load_css_js.php';
 require get_template_directory() . '/include/hooks/restrict_restapi.php';
 require get_template_directory() . '/include/hooks/custom_post_type.php';
 require get_template_directory() . '/include/hooks/modify_post_content.php';
+require get_template_directory() . '/include/hooks/sidebar.php';
 
 add_theme_support('menus');
 
+require get_template_directory() . '/include/ACF/event_date.php';

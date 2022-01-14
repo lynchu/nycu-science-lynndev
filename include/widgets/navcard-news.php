@@ -1,3 +1,5 @@
+<div class="navcard navcard_l">
+<div class="navcard_left">
 <?php
 
     $post_args = array(
@@ -25,7 +27,7 @@
 ?>
         </div><br>
         <div class="post_title ellipsis"><?php echo $post->post_title; ?></div><br><br><br>
-        <div class="category_name"><?php echo $category_name ?></div>
+        <!-- <div class="category_name"><?php #echo $category_name ?></div> -->
     </a>
 </div>
 <?php
@@ -41,7 +43,8 @@
     endif;
     wp_reset_postdata();
 ?>
-
+</div>
 <div class="nav_card_more">
     <a href="<?php echo home_url().'/category/news/all/'; ?>">more</a>
+</div>
 </div>
