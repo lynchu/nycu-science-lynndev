@@ -9,7 +9,8 @@ function custom_post_type(){
             'taxonomies' => array('category'),
             'public' => true,
             'show_in_rest' => true,
-            'supports' => array('title', 'editor', 'revisions')
+            'supports' => array('title', 'editor', 'revisions'),
+            'taxonomies' => array('post_tag')
         )
     );
 }
