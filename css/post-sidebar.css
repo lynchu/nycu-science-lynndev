@@ -1,128 +1,6 @@
-@import "../style.css";
-
-main * {
-    font-size: 1.375rem;
-}
-
-main {
-    padding: 150px calc(180/1920*100vw) 200px;
-    font-weight: normal; 
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.59;
-    letter-spacing: 3.3px;
-    text-align: left;
-    color: var(--black);
-}
-
-main h1 {
-    font-size: 3.75rem;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.33;
-    letter-spacing: 3px;
-    text-align: left;
-    color: var(--black);
-    margin-bottom: 150px;
-}
-
-#post-title-area {
-    display: flex;
-}
-
-#post-title {
-    flex-basis: calc(1140/1920*100vw);
-}
-
-#top-right-rect {
-    display: unset;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: rgb(var(--vivid-blue));
-    margin-right: 0;
-    margin-left: auto;
-}
-
-#post-content-area {
-    display: flex;
-    margin-bottom: 200px;
-}
-
-#post-content {
-    flex-basis: calc(1160/1920*100vw);
-    margin-right: 2rem;
-}
-
-#post-content a {
-    word-break: break-all;
-}
-
-#post-content h2 {
-    font-size: 1.625rem;
-    font-weight: bold;
-    letter-spacing: 3.9px;
-}
-
-#post-content h3 {
-    font-size: 1.375rem;
-    font-weight: bold;
-}
-
-#post-content h4 {
-    font-size: 1.125rem;
-    font-weight: bold;
-}
-
-#post-content h5 {
-    font-size: 1rem;
-}
-
-#post-content h6 {
-    font-size: 0.875rem;
-}
-
-#post-content h2,
-#post-content h3,
-#post-content h4,
-#post-content h5,
-#post-content h6,
-#post-content p {
-    margin-bottom: 30px;
-}
-
-#post-content img {
-    object-fit: contain;
-    border-radius: 20px;
-}
-
-#other-posts-area > h2 {
-    font-family: 'Noto Sans TC';
-    font-size: 1.875rem;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: 4.5px;
-    text-align: left;
-    color: rgb(var(--black));
-}
-
-.horizontal-divider {
-    width: 100%;
-    height: 0;
-    margin-bottom: 50px;
-    border: solid 1px #c7c8cb;
-    background-color: #c7c8cb;
-}
 /***********/
 /* Sidebar */
 /***********/
-.wp-block-file {
-    display: none;
-}
-
 .sticky {
     position: -webkit-sticky; /* for Safari */
     position: sticky;
@@ -230,35 +108,21 @@ main h1 {
     object-fit: contain;
 }
 
+#post-sidebar .horizontal-divider {
+    width: 100%;
+    height: 0;
+    margin-bottom: 50px;
+    border: solid 1px #c7c8cb;
+    background-color: #c7c8cb;
+}
+
 @media (max-width: 767px) {
     .sticky {
         position: unset;
         top: unset;
         align-self: unset;
     }
-    main {
-        padding: 75px calc(180/1920*100vw) 100px;
-        letter-spacing: unset;
-    }
-    main h1 {
-        font-size: 2rem;
-        margin-bottom: 75px;
-    }
-    #post-content-area {
-        margin-bottom: 100px;
-        flex-wrap: wrap;
-    }
-    #post-content {
-        margin-right: 0;
-        flex-basis: 100%;
-    }
-    #post-title {
-        flex-basis: 100%;
-    }
-    #top-right-rect {
-        display: none;
-    }
-    .horizontal-divider {
+    #post-sidebar .horizontal-divider {
         margin-bottom: 25px;
     }
     #post-sidebar {
@@ -281,7 +145,4 @@ main h1 {
         width: fit-content;
         max-width: 75vw;
     }
-}
-
-@media (max-width: 575px) {
 }

@@ -1,21 +1,9 @@
-<?php 
-get_header(); 
-// Start the Loop
-while ( have_posts() ) : 
-	the_post();
-	$post_id = get_the_ID();
+	<?php
+    $post_id = get_the_ID();
 	$colabs = get_post_meta( $post_id, '合作單位', true );
 	$docs = get_post_meta( $post_id, '側欄附件', false );
-?>
-
-<div id="post-title-area">
-	<h1 id="post-title"><?php the_title(); ?></h1>
-	<div id="top-right-rect"></div>
-</div>
-<div class="horizontal-divider"></div>
-<div id="post-content-area">
-	<div id="post-content"><?php the_content(); ?></div>
-	<!-- Sidebar Start -->
+    ?>
+    <!-- Sidebar Start -->
 	<div id="post-sidebar" class="sticky">
 		<div id="post-sidebar-info" class="post-sidebar-item">
 			<h2 class="post-sidebar-title">
@@ -78,13 +66,3 @@ while ( have_posts() ) :
 		</div>
 	</div>
 	<!-- Sidebar End -->
-</div>
-<div id="other-posts-area">
-	<h2><?php _e('下則公告', 'nycu-science' ); ?></h2>
-</div>
-
-<?php
-endwhile; 
-// End of the loop. 
-get_footer();
-?>
