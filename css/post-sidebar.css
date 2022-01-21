@@ -1,0 +1,148 @@
+/***********/
+/* Sidebar */
+/***********/
+.sticky {
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    top: calc(161/1920*100vw);
+    align-self: flex-start; /* <-- this is the fix */
+}
+
+.post-sidebar-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.88;
+    text-align: left;
+    color: rgb(var(--vivid-blue));
+}
+
+.post-sidebar-title-eng {
+    font-family: "TimesNewRomanPS-MT", Times, serif;;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-right: 1.25rem;
+}
+
+.post-sidebar-title-cht {
+    font-family: 'Noto Sans TC';
+    font-size: 1.563rem;
+    letter-spacing: 3.75px;
+}
+
+#post-sidebar {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(305/1920*100vw);
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.post-sidebar-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-sidebar-item > .horizontal-divider {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.post-sidebar-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    object-fit: contain;
+    max-width: 160px;
+}
+
+.post-sidebar-share-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+#post-sidebar-tags {
+    flex-direction: row;
+}
+
+#post-sidebar-tag-icon {
+    width: 23.3px;
+    height: 24.1px;
+    margin-right: 15px;
+}
+
+.post-sidebar-document-link {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    border: solid 1px rgb(var(--cornflower));
+    height: 40px;
+    padding: 6px 25px;
+    width: min(32vw, 18.3rem);
+    margin-bottom: 8px;
+}
+
+.post-sidebar-document-link > a {
+    font-family: 'Noto Sans TC';
+    font-size: 1.125rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 2.7px;
+    text-align: left;
+    color: rgb(var(--cornflower));
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#post-sidebar-download-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+#post-sidebar .horizontal-divider {
+    width: 100%;
+    height: 0;
+    margin-bottom: 50px;
+    border: solid 1px #c7c8cb;
+    background-color: #c7c8cb;
+}
+
+@media (max-width: 767px) {
+    .sticky {
+        position: unset;
+        top: unset;
+        align-self: unset;
+    }
+    #post-sidebar .horizontal-divider {
+        margin-bottom: 25px;
+    }
+    #post-sidebar {
+        margin-top: 60px;
+        margin-left: 0;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .post-sidebar-item {
+        flex-basis: 50%;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+    #post-sidebar-tags {
+        flex-basis: 100%;
+        justify-content: flex-start;
+    }
+    .post-sidebar-document-link {
+        width: fit-content;
+        max-width: 75vw;
+    }
+}
