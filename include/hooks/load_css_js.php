@@ -16,7 +16,7 @@ function theme_css_js() {
         wp_enqueue_script('general-js', get_template_directory_uri().'/js/general.js', 'jQuery', false, null);
     /* post style */
     if(is_single()) {
-        wp_enqueue_style('single', get_template_directory_uri().'/css/single.css', 'font', '2021122400', 'screen');        
+        wp_enqueue_style('single', get_template_directory_uri().'/css/single.css', array ('font', 'general-css'), '2021012100', 'screen');        
     }
     /* owl carousel gallery*/
     if (is_front_page()){
