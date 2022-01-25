@@ -6,3 +6,21 @@ Author URI:
 Description:
 Version: 0.1
 */
+:root {
+    /* 
+      Color palette
+      Usage:
+        rgb(var(--color))
+      or
+        rgba(var(--color, opacity))
+    */
+    --black: 13, 25, 34;
+    --white: 245, 245, 245;
+    --beige: 246, 243, 234;
+    --vivid-blue: 26, 48, 255;
+    --cornflower: 88, 102, 247;
+
+    --background-color: var(--beige);
+    --main-color: var(--vivid-blue);
+    --sub-color: var(--cornflower);
+}
