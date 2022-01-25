@@ -2,7 +2,7 @@
 <div class="navcard_right">
 <?php
     $post_args = array(
-        'numberposts' => 5,
+        'numberposts' => 4,
         'post_type' => 'news',
         'category_name' => 'events',
     );
@@ -18,7 +18,7 @@
         <div class="date">
 <?php
             $date = new DateTime(get_field('event_begin_date', $post));
-            $formatter = new IntlDateFormatter('en_US', IntlDateFormatter::MEDIUM, IntlDateFormatter::NONE, NULL, NULL, "YYYY MMM dd");
+            $formatter = new IntlDateFormatter('en_US', IntlDateFormatter::MEDIUM, IntlDateFormatter::NONE, NULL, NULL, "YYYY MM dd");
             $date_arr = explode(" ", $formatter->format($date)); // date_arr[0]: year, date_arr[1]: month, date_arr[2]: day
 ?>
         <div class="year">
@@ -28,7 +28,7 @@
         </div>
         <div class="day">
             <?php
-                echo $date_arr[1]."<br>". $date_arr[2]
+                echo $date_arr[1].".". $date_arr[2]
             ?>
         </div>
         </div>

@@ -23,7 +23,7 @@
             if($title === 'events')
                 echo '演講日期 ｜' . get_field('event_begin_date', $post) . ' ~ ' . get_field('event_end_date', $post);
             else
-                echo get_post_time('Y年m月d日', false, $post);
+                echo get_post_time('Y.m.d', false, $post);
 ?>
         </div><br>
         <div class="post_title ellipsis"><?php echo $post->post_title; ?></div><br><br><br>
