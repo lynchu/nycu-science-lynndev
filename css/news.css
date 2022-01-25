@@ -1,0 +1,131 @@
+.sidebar {
+    border-bottom: 1px groove;
+}
+
+.sidebar ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+}
+
+.sidebar li ul li a {
+    margin-right: 1rem;
+}
+
+.page_container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page_title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.rf-info_block .rf-text_block {
+    width: 100%;
+    padding: 1.5rem 0rem;
+    cursor: pointer;
+    border-bottom: 1px groove;
+}
+
+.rf-text_block a {
+    color: black;
+    display: block;
+    width: inherit;
+    height: inherit;
+    padding: 1rem 1rem;
+}
+
+.rf-info_block a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rf-info_block .rf-text_block .date {
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+}
+
+.rf-info_block .rf-text_block .year {
+    font-size: 1rem;
+}
+
+.rf-info_block .rf-text_block .title-field {
+    flex: 8;
+}
+
+.rf-info_block .rf-text_block .post_excerpt {
+    text-align: justify;
+}
+
+.date {
+    font-size: .8rem;
+}
+
+.title-field {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.category_name {
+    width: 7rem;
+    line-height: 2;
+    color: #f5f5f5;
+    background-color: #0d1922;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+
+.sidebar .menu-item-object-category {
+    font-size: 1.7rem;
+    line-height: 1.5;
+}
+
+.sidebar .menu-item-object-category a {
+    color: black;
+}
+
+.sidebar .menu-item-object-category::before {
+    font-size: 1.1rem;
+    content: "\25CB\ ";
+    color: #1a30ff;
+}
+
+.sidebar .current-menu-item::before {
+    content: "\25CF\ ";
+}
+
+/* .menu-item-object-category {
+    list-style: none;
+    font-size: 20px;
+}
+
+.menu-item-object-category:before {
+    content:"";
+    font-size:120px;
+    vertical-align:middle;
+    line-height:20px;
+} */
+
+/* .menu-item-object-category{
+    list-style-type: circle;
+    list-style-position: inside;
+    font-size: 1.7rem;
+    line-height: 1.4;
+}
+.menu-item-object-category a{
+    color: black;
+}
+.menu-item-object-category::marker{
+    color: #1a30ff;
+}
+.current-menu-item{
+    list-style-type: disc;
+} */

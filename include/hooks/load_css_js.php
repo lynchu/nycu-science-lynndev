@@ -14,15 +14,19 @@ function theme_css_js() {
         wp_enqueue_script('jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', false, null);
     /* general script */
         wp_enqueue_script('general-js', get_template_directory_uri().'/js/general.js', 'jQuery', false, null);
-    /* post style */
-    if(is_single()) {
-        wp_enqueue_style('single', get_template_directory_uri().'/css/single.css', 'font', '2021122400', 'screen');        
-    }
     /* owl carousel gallery*/
     if (is_front_page()){
         wp_enqueue_style('owl-css', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css', 'general-css', null, 'screen');
         wp_enqueue_script('owl-js', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', 'jQuery', false, null);
         wp_enqueue_script('gallery-js', get_template_directory_uri().'/js/gallery.js', 'general-js', false, null);
+    }
+    /* post style */
+    if(is_single()) {
+        wp_enqueue_style('single', get_template_directory_uri().'/css/single.css', 'font', '2021122400', 'screen');        
+    }
+    /* news*/
+    if (is_category( array('all', 'announcements', 'events', 'awards', 'sdgs') )){
+        wp_enqueue_style('news', get_template_directory_uri().'/css/news.css', 'font', '2021012100', 'screen');
     }
     
 }
