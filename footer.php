@@ -9,14 +9,14 @@
                     <tbody>
                         <tr>
                             <td id="up-left">886-3-572-7077</td>
-                            <td id="up-right">science@cc.nycu.edu.tw</td>
+                            <td id="up-right">science@nycu.edu.tw</td>
                         </tr>
                         <tr>
                             <td><br></td>
                         </tr>
                         <tr>
                             <td id="down-left">886-3-571-9507</td>
-                            <td id="down-right">300 新竹市東區大學路1001號基礎科學教學研究大樓101室</td>
+                            <td id="down-right">30010 新竹市東區大學路1001號科學三館101室</td>
                         </tr>
                     </tbody>
                 </table>

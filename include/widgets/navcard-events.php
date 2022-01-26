@@ -1,6 +1,8 @@
+<div class="navcard navcard_r">
+<div class="navcard_right">
 <?php
     $post_args = array(
-        'numberposts' => 5,
+        'numberposts' => 4,
         'post_type' => 'news',
         'category_name' => 'events',
     );
@@ -15,13 +17,26 @@
     <a href="<?php echo get_permalink($post); ?>">
         <div class="date">
 <?php
-            if($title === 'events')
-                echo '演講日期 ｜' . get_field('event_begin_date', $post) . ' ~ ' . get_field('event_end_date', $post);
-            else
-                echo get_post_time('Y.m.d', false, $post);
+            $date = new DateTime(get_field('event_begin_date', $post));
+            $formatter = new IntlDateFormatter('en_US', IntlDateFormatter::MEDIUM, IntlDateFormatter::NONE, NULL, NULL, "YYYY MM dd");
+            $date_arr = explode(" ", $formatter->format($date)); // date_arr[0]: year, date_arr[1]: month, date_arr[2]: day
 ?>
+        <div class="year">
+            <?php
+                echo $date_arr[0]
+            ?>
         </div>
-        <div class="title ellipsis"><?php echo $post->post_title; ?></div>
+        <div class="day">
+            <?php
+                echo $date_arr[1].".". $date_arr[2]
+            ?>
+        </div>
+        </div>
+        <div class="post_title_content">
+        <div class="post_title ellipsis"><?php echo $post->post_title;?></div><br>
+        <div class="post_excerpt"><?php the_excerpt();?></div>
+        </div>
+        
     </a>
 </div>
 <?php
@@ -37,7 +52,8 @@
     endif;
     wp_reset_postdata();
 ?>
-
+</div>
 <div class="nav_card_more">
-    <a href="<?php echo home_url().'/category/news/events/'; ?>">MORE</a>
+    <a href="<?php echo home_url().'/category/news/events/'; ?>">more</a>
+</div>
 </div>

@@ -2,15 +2,13 @@
 
 $(() => { //wait for DOM load
     const dropdowns = document.getElementsByClassName("sub-menu");
-    const container = document.getElementById("container");
-    const navbar = document.getElementById("navbar");
+    const blocker = document.getElementById("blocker");
 
     let hidedropdowns = () => {
         Array.from(dropdowns).forEach(el => {
             el.removeAttribute("style");
         });
-        container.removeAttribute("style");
-        navbar.removeAttribute("style");
+        blocker.removeAttribute("style");
     }
 
     $(window).on("click", event => {
@@ -23,8 +21,7 @@ $(() => { //wait for DOM load
         }
         if (target.matches('.menu-item-has-children')) {
             target.querySelector('ul.sub-menu').style.display = "flex";
-            container.style.backgroundColor = "rgba(0, 0, 0, .3)";
-            // navbar.style.backgroundColor = "rgba(238, 237, 234, .9)";
+            $('#blocker').css('display','block');
         } else {
             hidedropdowns();
         }
@@ -56,4 +53,7 @@ $(() => { //wait for DOM load
         // }
         prevScrollpos = currentScrollPos
     });
+
+    $('#single_cat_title>ul>li>a').remove();
+
 });

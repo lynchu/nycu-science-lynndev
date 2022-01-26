@@ -14,9 +14,6 @@ while ( have_posts() ) :
 	<div id="post-content"><?php the_content(); ?></div>
 	<?php if(is_single()) { get_template_part('include/template-parts/post', 'sidebar'); } ?>
 </div>
-<div id="other-posts-area">
-	<h2><?php _e('下則公告', 'nycu-science' ); ?></h2>
-</div>
 
 <?php
 endwhile; 

@@ -11,7 +11,7 @@
 
         <div class="page_content_top">
             <div class="page_title">
-                <?php echo $category_name ?>
+                <?php echo $category_name?>
 
             </div>
             <div class="sidebar" id="single_cat_title">
@@ -31,7 +31,7 @@
 <?php
             $args = array(
                 'post_type' => 'any',
-                'category_name' => 'all,announcements,events,awards,sdgs',
+                'category_name' => $cat_slug,
                 //'posts_per_page' => 3,
                 'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
             );
@@ -79,7 +79,7 @@
             wp_reset_postdata();
 ?>
             <!-- <div class="pagenavi_container">
-                <?php //echo get_pagenavi($query); ?>
+            <?php //echo get_pagenavi($query); ?>
             </div> -->
         </div>
 
