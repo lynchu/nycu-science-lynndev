@@ -51,9 +51,9 @@ main h1 {
 }
 
 #post-content {
+    max-width: calc(1160/1920*100vw);
     flex-basis: calc(1160/1920*100vw);
     flex-grow: 1;
-    margin-right: 2rem;
 }
 
 #post-content a {
@@ -134,6 +134,7 @@ main h1 {
     #post-content {
         margin-right: 0;
         flex-basis: 100%;
+        max-width: 100%;
     }
     #post-title {
         flex-basis: 100%;
