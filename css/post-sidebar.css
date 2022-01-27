@@ -112,8 +112,8 @@
     width: 100%;
     height: 0;
     margin-bottom: 50px;
-    border: solid 1px #c7c8cb;
-    background-color: #c7c8cb;
+    border: solid 1px rgb(var(--hr-gray));
+    background-color: rgb(var(--hr-gray));
 }
 
 @media (max-width: 767px) {

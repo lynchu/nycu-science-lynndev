@@ -93,7 +93,7 @@
     }
 
     .nav_card_item a {
-        color: black;
+        color: rgb(var(--dark));
         display: block;
         width: inherit;
         height: inherit;
@@ -108,7 +108,7 @@
         display: flex;
         flex-direction: row;
         /* border-bottom: 1px groove; */
-        border-bottom: 1px solid #c7c8cb;
+        border-bottom: 1px solid rgb(var(--hr-gray));
         padding-left: 0;
     }
 
@@ -149,8 +149,8 @@
     .category_name {
         width: 5rem;
         line-height: 1.7;
-        color: #f5f5f5;
-        background-color: #0d1922;
+        color: rgb(var(--white));
+        background-color: rgb(var(--dark));
         text-align: center;
         border-radius: 20px;
         font-size: .8rem;
@@ -160,8 +160,8 @@
         width: 6rem;
         height: 2.5rem;
         line-height: 3;
-        color: #f5f5f5;
-        background-color: #0d1922;
+        color: rgb(var(--white));
+        background-color: rgb(var(--dark));
         text-align: center;
         border-radius: 10px;
         letter-spacing: .2rem;
@@ -174,12 +174,12 @@
         display: block;
         width: inherit;
         height: inherit;
-        color: #f5f5f5;
+        color: rgb(var(--white));
         font-size: .8rem;
     }
 
     .nav_card_item a {
-        background: linear-gradient(135deg, #5866f7 50%, #eeedea 50%);
+        background: linear-gradient(135deg, rgb(var(--cornflower)) 50%, rgb(var(--beige)) 50%);
         position: relative;
     }
 
@@ -190,7 +190,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: linear-gradient(135deg, #5866f7 50%, transparent 50%);
+        background: linear-gradient(135deg, rgb(var(--cornflower)) 50%, transparent 50%);
         z-index: -1;
     }
 
@@ -203,7 +203,7 @@
 
     .nav_card_item a:hover,
     .nav_card_item a:hover:after {
-        color: #f5f5f5;
+        color: rgb(var(--white));
         background-position: 0;
     }
 </style>
