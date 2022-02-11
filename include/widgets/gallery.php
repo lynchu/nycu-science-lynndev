@@ -43,20 +43,21 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 60vw;
-        margin-left: 20%;
+        width: calc(1240/1920*100vw);
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .gallery_content {
         width: 100%;
-        height: 30vw;
+        height: calc(499/1920*100vw);;
         border-radius: 20px;
         overflow: hidden;
     }
 
     .gallery .owl-item {
         width: 100%;
-        height: 30vw;
+        height: calc(499/1920*100vw);;
         position: relative;
     }
 

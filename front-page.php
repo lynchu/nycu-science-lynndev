@@ -25,8 +25,8 @@
     }
 
     .navcard_container {
-        width: 75%;
-        margin: 5vw 12.5%;
+        width: 80%;
+        margin: 5vw 10%;
         display: flex;
         justify-content: space-between;
     }
@@ -38,11 +38,11 @@
     }
 
     .navcard_r {
-        width: 50%;
+        width: 53.6%;
     }
 
     .navcard_l {
-        width: 40%;
+        width: 42.5%;
     }
 
     .navcard_left:before {
@@ -55,6 +55,9 @@
         ?>/images/front-page_news.svg);
         margin-bottom: -0.2rem;
         margin-left: 2rem;
+    }
+    .navcard_left{
+        width: 100%;
     }
 
     .navcard_right:before {
