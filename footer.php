@@ -4,7 +4,7 @@
     <footer id="footer">
         <div class="footer_wrapper">
             <div class="contact">
-                <div class="contact_title">CONTACT</div><br>
+                <div class="contact_title">CONTACT</div><br><br>
                 <table>
                     <tbody>
                         <tr>
