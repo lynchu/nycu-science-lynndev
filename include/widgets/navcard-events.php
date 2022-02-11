@@ -3,7 +3,7 @@
 <?php
     $post_args = array(
         'numberposts' => 4,
-        'post_type' => 'news',
+        'post_type' => 'any',
         'category_name' => 'events',
     );
 
