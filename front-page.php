@@ -47,14 +47,15 @@
 
     .navcard_left:before {
         content: "";
-        display: inline-block;
+        display: block;
         width: 10rem;
         height: 4rem;
         background-size: 10rem 4rem;
         background-image: url(<?php bloginfo('template_url');
         ?>/images/front-page_news.svg);
         margin-bottom: -0.2rem;
-        margin-left: 2rem;
+        margin-right: auto;
+        margin-left: 10%;
     }
     .navcard_left{
         width: 100%;
@@ -62,14 +63,14 @@
 
     .navcard_right:before {
         content: "";
-        display: inline-block;
+        display: block;
         width: 10rem;
         height: 4rem;
         background-size: 10rem 4rem;
-        background-image: url(<?php bloginfo('template_url');
-        ?>/images/front-page_events.svg);
+        background-image: url(https://science-dev.nycu.page/wp-content/themes/nycu-science-dev-terry/images/front-page_events.svg);
         margin-bottom: -0.2rem;
-        margin-left: 20rem;
+        margin-right: 10%;
+        margin-left: auto;
     }
 
     .navcard_right {
