@@ -105,7 +105,7 @@ img {
 }
 
 #navbar .menu-main-container>ul>li {
-    margin: 0 .5rem;
+    margin: 0 1rem;
 }
 
 #navbar li ul {
@@ -221,6 +221,10 @@ img {
     font-weight: 300;
 }
 
+.contact table td {
+    padding: .5rem 0;
+}
+
 .contact_title {
     font-weight: bold;
 }
@@ -281,4 +285,17 @@ img {
 
 @media screen and (max-width: 800px) {}
 
-@media screen and (max-width: 415px) {}
+@media screen and (max-width: 415px) {
+    .contact table td {
+        display: block; /* 一定要下！ */
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+    .copyright {
+        flex-direction: column;
+    }
+    .friend_link {
+        flex-direction: row;
+        width: 100%;;
+    }
+}

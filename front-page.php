@@ -210,6 +210,20 @@
         color: rgb(var(--white));
         background-position: 0;
     }
+
+    @media screen and (max-width: 800px) {}
+
+    @media screen and (max-width: 415px) {
+        .navcard_container{
+            flex-direction: column;
+        }
+        .navcard_l {
+            width: 100%;
+        }
+        .navcard_r{
+            width: 100%;
+        }
+    }
 </style>
 
 <?php get_footer(); ?>
