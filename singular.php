@@ -26,6 +26,7 @@ if ( get_post_type( $post_id ) == 'news' ) :
 		'orderby' => 'date', 
 		'order' => 'DEC', 
 	);
+	if ( $loop->have_posts() ) :
 ?>
 <div id="post-list-area">
 	<h2>下則公告</h2>
@@ -33,8 +34,8 @@ if ( get_post_type( $post_id ) == 'news' ) :
 		<div id="arrow-previous" class="arrow">←</div>
 		<ul id="post-list">
 <?php 
-	$loop = new WP_Query( $args ); 
-	while ( $loop->have_posts() ) : $loop->the_post(); 
+		$loop = new WP_Query( $args ); 
+		while ( $loop->have_posts() ) : $loop->the_post(); 
 ?>		
 		<li class="post-list-item">
 			<dev class="round-edge"></dev>
@@ -43,15 +44,14 @@ if ( get_post_type( $post_id ) == 'news' ) :
 		</li>
 <?php
 		//the_tags( 'Tags: ', ', ', '<br />' );
-	endwhile; 
+		endwhile; 
 ?>
 		</ul>
 		<div id="arrow-next" class="arrow">→</div>
 	</div>
 </div>
-
-	<!-- Do special_cat stuff... -->
 <?php 
+	endif;
 endif;
 get_footer();
 ?>
