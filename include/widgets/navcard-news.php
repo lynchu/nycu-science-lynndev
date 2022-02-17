@@ -4,7 +4,7 @@
 
     $post_args = array(
         'numberposts' => 5,
-        'post_type' => 'news',
+        'post_type' => 'any',
         'category_name' => 'announcements,awards,sdgs',
     );
 

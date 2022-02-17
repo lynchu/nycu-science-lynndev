@@ -4,15 +4,12 @@
     <footer id="footer">
         <div class="footer_wrapper">
             <div class="contact">
-                <div class="contact_title">CONTACT</div><br>
+                <div class="contact_title">CONTACT</div><br><br>
                 <table>
                     <tbody>
                         <tr>
                             <td id="up-left">886-3-572-7077</td>
                             <td id="up-right">science@nycu.edu.tw</td>
-                        </tr>
-                        <tr>
-                            <td><br></td>
                         </tr>
                         <tr>
                             <td id="down-left">886-3-571-9507</td>

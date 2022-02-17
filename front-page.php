@@ -25,8 +25,8 @@
     }
 
     .navcard_container {
-        width: 75%;
-        margin: 5vw 12.5%;
+        width: 80%;
+        margin: 5vw 10%;
         display: flex;
         justify-content: space-between;
     }
@@ -38,35 +38,39 @@
     }
 
     .navcard_r {
-        width: 50%;
+        width: 53.6%;
     }
 
     .navcard_l {
-        width: 40%;
+        width: 42.5%;
     }
 
     .navcard_left:before {
         content: "";
-        display: inline-block;
+        display: block;
         width: 10rem;
         height: 4rem;
         background-size: 10rem 4rem;
         background-image: url(<?php bloginfo('template_url');
         ?>/images/front-page_news.svg);
         margin-bottom: -0.2rem;
-        margin-left: 2rem;
+        margin-right: auto;
+        margin-left: 10%;
+    }
+    .navcard_left{
+        width: 100%;
     }
 
     .navcard_right:before {
         content: "";
-        display: inline-block;
+        display: block;
         width: 10rem;
         height: 4rem;
         background-size: 10rem 4rem;
-        background-image: url(<?php bloginfo('template_url');
-        ?>/images/front-page_events.svg);
+        background-image: url(https://science-dev.nycu.page/wp-content/themes/nycu-science-dev-terry/images/front-page_events.svg);
         margin-bottom: -0.2rem;
-        margin-left: 20rem;
+        margin-right: 10%;
+        margin-left: auto;
     }
 
     .navcard_right {
@@ -93,7 +97,7 @@
     }
 
     .nav_card_item a {
-        color: black;
+        color: rgb(var(--dark));
         display: block;
         width: inherit;
         height: inherit;
@@ -108,7 +112,7 @@
         display: flex;
         flex-direction: row;
         /* border-bottom: 1px groove; */
-        border-bottom: 1px solid #c7c8cb;
+        border-bottom: 1px solid rgb(var(--hr-gray));
         padding-left: 0;
     }
 
@@ -149,8 +153,8 @@
     .category_name {
         width: 5rem;
         line-height: 1.7;
-        color: #f5f5f5;
-        background-color: #0d1922;
+        color: rgb(var(--white));
+        background-color: rgb(var(--dark));
         text-align: center;
         border-radius: 20px;
         font-size: .8rem;
@@ -160,8 +164,8 @@
         width: 6rem;
         height: 2.5rem;
         line-height: 3;
-        color: #f5f5f5;
-        background-color: #0d1922;
+        color: rgb(var(--white));
+        background-color: rgb(var(--dark));
         text-align: center;
         border-radius: 10px;
         letter-spacing: .2rem;
@@ -174,12 +178,12 @@
         display: block;
         width: inherit;
         height: inherit;
-        color: #f5f5f5;
+        color: rgb(var(--white));
         font-size: .8rem;
     }
 
     .nav_card_item a {
-        background: linear-gradient(135deg, #5866f7 50%, #eeedea 50%);
+        background: linear-gradient(135deg, rgb(var(--cornflower)) 50%, rgb(var(--beige)) 50%);
         position: relative;
     }
 
@@ -190,7 +194,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: linear-gradient(135deg, #5866f7 50%, transparent 50%);
+        background: linear-gradient(135deg, rgb(var(--cornflower)) 50%, transparent 50%);
         z-index: -1;
     }
 
@@ -203,8 +207,22 @@
 
     .nav_card_item a:hover,
     .nav_card_item a:hover:after {
-        color: #f5f5f5;
+        color: rgb(var(--white));
         background-position: 0;
+    }
+
+    @media screen and (max-width: 800px) {}
+
+    @media screen and (max-width: 415px) {
+        .navcard_container{
+            flex-direction: column;
+        }
+        .navcard_l {
+            width: 100%;
+        }
+        .navcard_r{
+            width: 100%;
+        }
     }
 </style>
 

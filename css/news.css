@@ -75,8 +75,8 @@
 .category_name {
     width: 7rem;
     line-height: 2;
-    color: #f5f5f5;
-    background-color: #0d1922;
+    color: rgb(var(--white));
+    background-color: rgb(var(--dark));
     text-align: center;
     border-radius: 20px;
     font-size: 1rem;
@@ -95,7 +95,7 @@
 .sidebar .menu-item-object-category::before {
     font-size: 1.1rem;
     content: "\25CB\ ";
-    color: #1a30ff;
+    color: rgb(var(--vivid-blue));;
 }
 
 .sidebar .current-menu-item::before {
@@ -124,7 +124,7 @@
     color: black;
 }
 .menu-item-object-category::marker{
-    color: #1a30ff;
+    color: rgb(var(--vivid-blue));;
 }
 .current-menu-item{
     list-style-type: disc;
