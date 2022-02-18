@@ -32,6 +32,30 @@ body {
     background-color: rgb(var(--beige));
 }
 
+table {
+    border-collapse: collapse;
+}
+
+table td, table th {
+    padding: 0.5em;
+    border: 1px solid;
+    word-break: normal;
+}
+
+.wp-block-table thead {
+    border-bottom: 3px solid;
+}
+
+.wp-block-table tfoot {
+    border-top: 3px solid;
+}
+
+.wp-block-table figcaption {
+    color: #555;
+    font-size: 13px;
+    text-align: center;
+}
+
 p {
     margin: 0;
 }
