@@ -26,15 +26,16 @@ while ( have_posts() ) : the_post();
 <?php endwhile; ?>
 <!-- End of the loop. -->
 <?php 
-if ( get_post_type( $post_id ) == 'news' ) :
+if ( is_post_in_category('news', $post_id) ) :
 	$args = array(  
 		'post__not_in' => array($post_id),
-		'post_type' => 'news',
+		'category_name' => 'news',
 		'post_status' => 'publish',
 		'posts_per_page' => 4, 
 		'orderby' => 'date', 
 		'order' => 'DEC', 
 	);
+	$loop = new WP_Query( $args ); 
 	if ( $loop->have_posts() ) :
 ?>
 <div id="post-list-area">
@@ -43,16 +44,24 @@ if ( get_post_type( $post_id ) == 'news' ) :
 		<div id="arrow-previous" class="arrow">←</div>
 		<ul id="post-list">
 <?php 
-		$loop = new WP_Query( $args ); 
 		while ( $loop->have_posts() ) : $loop->the_post(); 
 ?>		
 		<li class="post-list-item">
-			<dev class="round-edge"></dev>
-			<dev class="date"><?php echo get_the_date('Y.m.d'); ?></dev>
-			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			<div class="round-edge"></div>
+			<div class="info">
+				<div class="text-wrapper">
+					<div class="date"><?php echo get_the_date('Y.m.d'); ?></div>
+					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				</div>
+				<div class="post-list-tags">
+					<img class='tag-icon'
+							src="<?php echo get_template_directory_uri() . '/images/tag-icon.png';?>"
+							alt="post tags: ">
+					<p><?php the_tags("","·"); ?></p>
+				</div>
+			</div>
 		</li>
 <?php
-		//the_tags( 'Tags: ', ', ', '<br />' );
 		endwhile; 
 ?>
 		</ul>
