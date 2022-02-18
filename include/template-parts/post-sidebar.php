@@ -9,7 +9,12 @@
 		get_field( 'document4', $post_id ),
 		get_field( 'document5', $post_id )
 	);
-	$docs = $acf_docs;
+	$docs = array();
+	foreach ($acf_docs as $val):
+		if($val):
+			array_push($docs, $val);
+		endif;
+	endforeach;
     ?>
     <!-- Sidebar Start -->
 	<div id="post-sidebar" class="sticky">
@@ -37,14 +42,12 @@
 			</h2>
 			<div id="post-sidebar-document-links">
 			<?php foreach ($docs as $val): ?>
-				<?php if($val): ?>
 				<div class="post-sidebar-document-link">
 					<img id='post-sidebar-download-icon'
 						src="<?php echo get_template_directory_uri() . '/images/download-icon.png';?>"
 						alt="">
 					<a href="<?php echo $val['url']; ?>"><?php echo $val['filename']; ?></a>
 				</div>
-				<?php endif; ?>
 			<?php endforeach; ?>
 			</div>
 			<div class="horizontal-divider"></div>
