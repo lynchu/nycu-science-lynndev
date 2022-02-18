@@ -1,7 +1,15 @@
 	<?php
     $post_id = get_the_ID();
 	$colabs = get_post_meta( $post_id, '合作單位', true );
-	$docs = get_post_meta( $post_id, '側欄附件', false );
+	//$docs = get_post_meta( $post_id, '側欄附件', false );
+	$acf_docs = array(
+		get_field( 'document1', $post_id ),
+		get_field( 'document2', $post_id ),
+		get_field( 'document3', $post_id ),
+		get_field( 'document4', $post_id ),
+		get_field( 'document5', $post_id )
+	);
+	$docs = $acf_docs;
     ?>
     <!-- Sidebar Start -->
 	<div id="post-sidebar" class="sticky">
@@ -29,12 +37,14 @@
 			</h2>
 			<div id="post-sidebar-document-links">
 			<?php foreach ($docs as $val): ?>
+				<?php if($val): ?>
 				<div class="post-sidebar-document-link">
 					<img id='post-sidebar-download-icon'
 						src="<?php echo get_template_directory_uri() . '/images/download-icon.png';?>"
 						alt="">
-					<?php echo $val; ?>
+					<a href="<?php echo $val['url']; ?>"><?php echo $val['filename']; ?></a>
 				</div>
+				<?php endif; ?>
 			<?php endforeach; ?>
 			</div>
 			<div class="horizontal-divider"></div>

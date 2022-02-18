@@ -73,6 +73,7 @@
     width: 23.3px;
     height: 24.1px;
     margin-right: 15px;
+    align-self: center;
 }
 
 .post-sidebar-document-link {
