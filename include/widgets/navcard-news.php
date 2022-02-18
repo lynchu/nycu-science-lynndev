@@ -12,7 +12,7 @@
 
     if($posts):
 
-        foreach(get_posts($post_args) as $post):
+        foreach($posts as $post):
             $the_cat = get_the_category();
             $category_name = $the_cat[0]->cat_name;
 ?>
@@ -25,7 +25,7 @@
             else
                 echo get_post_time('Y.m.d', false, $post);
 ?>
-        </div><br>
+        </div><br><br>
         <div class="post_title ellipsis"><?php echo $post->post_title; ?></div><br><br><br>
         <!-- <div class="category_name"><?php #echo $category_name ?></div> -->
     </a>

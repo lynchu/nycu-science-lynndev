@@ -20,7 +20,9 @@
                         </div>
                     </a>
 
-
+                    <!-- <button id="navBtn">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> -->
                     <?php wp_nav_menu(); ?>
                     <div id="blocker"></div>
                 </nav>

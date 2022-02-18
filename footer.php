@@ -19,7 +19,9 @@
                 </table>
             </div>
             <br>
+            <br>
             <hr>
+            <br>
             <br>
             <div class="copyright">
                 <div class="copyright_content">&copy; <?php echo date('Y'); ?> College of Science, NYCU. All rights reserved.</div>

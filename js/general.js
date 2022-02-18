@@ -27,6 +27,15 @@ $(() => { //wait for DOM load
         }
     });
 
+    // $("#navBtn").click(() => {
+    //     $("#navbar ul").slideToggle();
+    // });
+
+    // window.onresize = () => {
+    //     if (jq3(window).width() > 800) {
+    //         jq3("#navbar ul").css("display", "");
+    //     }
+    // }
 
     $('#topBtn').click(() => {
         $("html, body").animate({
