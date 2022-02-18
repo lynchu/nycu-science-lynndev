@@ -145,8 +145,8 @@ main h1 {
 
 .post-list-item > .round-edge {
     display: block;
-    border-left: solid 1px #c7c8cb;
-    border-bottom: solid 1px #c7c8cb;
+    border-left: solid 2px #c7c8cb;
+    border-bottom: solid 2px #c7c8cb;
     border-bottom-left-radius: 20px;
     height: 143px;
     min-width: 54px;
