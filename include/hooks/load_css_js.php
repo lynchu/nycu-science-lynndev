@@ -1,9 +1,10 @@
 <?php
 
-function post_sidebar_css() {
+function post_template_part_css() {
     wp_enqueue_style('post-sidebar', get_template_directory_uri().'/css/post-sidebar.css', 'single', '2021012100', 'screen' );
+    wp_enqueue_style('post-nav-list', get_template_directory_uri().'/css/post-nav-list.css', 'single', '2021021800', 'screen' );
 }
-add_action('get_template_part_include/template-parts/post', 'post_sidebar_css');
+add_action('get_template_part_include/template-parts/post', 'post_template_part_css');
 
 function theme_css_js() {
     /* css normalize */
