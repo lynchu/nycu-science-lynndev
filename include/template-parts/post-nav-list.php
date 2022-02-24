@@ -14,7 +14,7 @@ if ( $loop->have_posts() ) :
 <div id="post-list-area">
 	<h2><?php _e( '下則公告', 'nycu-science' ); ?></h2>
 	<div id="post-list-wrap">
-		<div id="arrow-previous" class="arrow">←</div>
+		<div id="arrow-previous" class="arrow"></div>
 		<ul id="post-list">
 <?php 
     while ( $loop->have_posts() ) : $loop->the_post(); 
@@ -38,7 +38,7 @@ if ( $loop->have_posts() ) :
     endwhile; 
 ?>
 		</ul>
-		<div id="arrow-next" class="arrow">→</div>
+		<div id="arrow-next" class="arrow"></div>
 	</div>
 </div>
 <?php 
