@@ -4,7 +4,7 @@ html {
     font-size: 16px;
 }
 
-html * {
+body {
     font-size: 1rem;
 }
 
@@ -42,7 +42,7 @@ h6 {
 }
 
 /*for screen size like iPhone5*/
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 1024px) {
     html {
         font-size: 14px;
     }

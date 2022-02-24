@@ -118,7 +118,6 @@ img {
     text-decoration: none;
     color: rgb(var(--dark));
     display: inherit;
-    font-size: inherit;
 }
 
 #navbar ul {
@@ -305,10 +304,6 @@ img {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
     display: none;
-}
-
-#post-content p a{
-    font-size: inherit;
 }
 
 @media screen and (max-width: 800px) {}
