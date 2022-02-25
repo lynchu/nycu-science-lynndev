@@ -10,7 +10,7 @@
 #post-list-area > h2 {
     font-family: 'Noto Sans TC';
     font-size: 1.875rem;
-    font-weight: bold;
+    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.5;
@@ -84,7 +84,7 @@
 .post-list-item > .info > .text-wrapper > a {
     font-family: 'Noto Sans TC';
     font-size: 1.875rem;
-    font-weight: bold;
+    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.5;

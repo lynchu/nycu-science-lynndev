@@ -285,7 +285,7 @@ img {
 }
 
 .contact_title {
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1.375rem;
 }
 
@@ -394,7 +394,7 @@ hr {
 #EN {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.375rem;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 1.18;
     color: rgb(var(--vivid-blue))!important;
 }
