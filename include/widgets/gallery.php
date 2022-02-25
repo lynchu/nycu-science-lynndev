@@ -50,14 +50,14 @@
 
     .gallery_content {
         width: 100%;
-        height: calc(499/1920*100vw);;
+        height: calc(499/1920*100vw);
         border-radius: 20px;
         overflow: hidden;
     }
 
     .gallery .owl-item {
         width: 100%;
-        height: calc(499/1920*100vw);;
+        height: calc(499/1920*100vw);
         position: relative;
     }
 

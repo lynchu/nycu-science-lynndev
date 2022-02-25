@@ -121,6 +121,9 @@
         flex: 1;
         text-align: center;
         font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         /* color: rgba(0, 0, 0, 0.5); */
     }
 
@@ -130,12 +133,15 @@
     }
 
     .navcard_right .nav_card_item .year {
-        margin-top: 2rem;
+        /* margin-top: 2rem; */
         letter-spacing: 2px;
     }
 
     .navcard_right .nav_card_item .post_title_content {
         flex: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .navcard_right .nav_card_item .post_excerpt {

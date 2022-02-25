@@ -25,7 +25,7 @@
             else
                 echo get_post_time('Y.m.d', false, $post);
 ?>
-        </div><br><br>
+        </div><br>
         <div class="post_title ellipsis"><?php echo $post->post_title; ?></div><br><br><br>
         <!-- <div class="category_name"><?php #echo $category_name ?></div> -->
     </a>
