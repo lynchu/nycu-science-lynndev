@@ -26,7 +26,7 @@
 }
 
 .page_title {
-    font-size: 3rem;
+    font-size: 3.75rem;
     font-weight: bold;
 }
 
@@ -54,7 +54,7 @@
 .rf-info_block .rf-text_block .date {
     flex: 1;
     text-align: center;
-    font-weight: 600;
+    font-weight: bold;
     color: rgba(0, 0, 0, 0.5);
 }
 
@@ -71,7 +71,7 @@
 }
 
 .title-field {
-    font-weight: 600;
+    font-weight: bold;
     font-size: 1.875rem;
 }
 
@@ -89,6 +89,7 @@
 .sidebar .menu-item-object-category {
     font-size: 1.7rem;
     line-height: 1.5;
+    margin-right: 2rem;
 }
 
 .sidebar .menu-item-object-category a {

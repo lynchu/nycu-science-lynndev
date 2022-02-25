@@ -154,7 +154,7 @@
     }
 
     .post_title {
-        font-weight: 600;
+        font-weight: bold;
         font-size: 1.875rem;
     }
 
