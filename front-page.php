@@ -26,7 +26,7 @@
 
     .navcard_container {
         width: 80%;
-        margin: 5vw 10%;
+        margin: 5vh 10%;
         display: flex;
         justify-content: space-between;
     }
@@ -67,7 +67,8 @@
         width: 10rem;
         height: 4rem;
         background-size: 10rem 4rem;
-        background-image: url(https://science-dev.nycu.page/wp-content/themes/nycu-science-dev-terry/images/front-page_events.svg);
+        background-image: url(<?php bloginfo('template_url');
+        ?>/images/front-page_events.svg);
         margin-bottom: -0.2rem;
         margin-right: 10%;
         margin-left: auto;
@@ -80,7 +81,7 @@
 
     .navcard_right .nav_card_item {
         width: 100%;
-        height: 12rem;
+        height: 13.5rem;
         /* margin-bottom: 1.5rem; */
         cursor: pointer;
         /* border-bottom: 1px groove; */
@@ -88,7 +89,7 @@
 
     .navcard_left .nav_card_item {
         width: 100%;
-        /* height: 12rem; */
+        height: 12rem;
         border-radius: 10px;
         box-shadow: 1px 3px 20px 0 rgba(0, 0, 0, 0.16);
         /* background-color: #eeedea; */
@@ -101,7 +102,7 @@
         display: block;
         width: inherit;
         height: inherit;
-        padding: 1rem 1rem;
+        padding: 2rem 1.5rem;
     }
 
     .navcard_left a {
@@ -120,6 +121,9 @@
         flex: 1;
         text-align: center;
         font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         /* color: rgba(0, 0, 0, 0.5); */
     }
 
@@ -129,12 +133,15 @@
     }
 
     .navcard_right .nav_card_item .year {
-        margin-top: 2rem;
+        /* margin-top: 2rem; */
         letter-spacing: 2px;
     }
 
     .navcard_right .nav_card_item .post_title_content {
         flex: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .navcard_right .nav_card_item .post_excerpt {
@@ -142,12 +149,13 @@
     }
 
     .date {
-        font-size: .8rem;
+        font-size: 1.375rem;
+        color: rgba(0, 0, 0, 0.5);
     }
 
     .post_title {
-        font-weight: 600;
-        font-size: 1.2rem;
+        font-weight: 500;
+        font-size: 1.875rem;
     }
 
     .category_name {
@@ -223,6 +231,16 @@
         .navcard_r{
             width: 100%;
         }
+    }
+    .featured_thumb {
+        width: 100%;
+        position: relative;
+        
+    }
+
+    .featured_thumb img {
+        width: 100%;
+        border-radius: 20px;
     }
 </style>
 

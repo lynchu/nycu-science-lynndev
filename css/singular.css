@@ -12,18 +12,18 @@ main {
 
 main h2 {
     font-size: 1.625rem;
-    font-weight: bold;
+    font-weight: 500;
     letter-spacing: 3.9px;
 }
 
 main h3 {
     font-size: 1.375rem;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 main h4 {
     font-size: 1.125rem;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 main h5 {
@@ -40,7 +40,7 @@ main h6 {
 
 #post-title {
     font-size: 3.125rem;
-    font-weight: bold;
+    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.6;

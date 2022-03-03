@@ -20,8 +20,13 @@
                         </div>
                     </a>
 
-
+                    <!-- <button id="navBtn">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> -->
                     <?php wp_nav_menu(); ?>
+                    <a id="EN" href="https://science.nycu.edu.tw/en/en-homepage/">
+                        EN
+                    </a>
                     <div id="blocker"></div>
                 </nav>
             </header>

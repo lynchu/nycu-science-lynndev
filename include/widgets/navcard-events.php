@@ -10,9 +10,22 @@
     $posts = get_posts($post_args);
 
     if($posts):
-
-        foreach(get_posts($post_args) as $post):
+        $print_thumb=true;
+        foreach($posts as $post):
+        if ($print_thumb && has_post_thumbnail()):
 ?>
+    <div class="featured_thumb">
+    <?php
+            the_post_thumbnail();
+            $print_thumb=false;
+    ?>
+    </div>
+    <?php
+        endif;
+        endforeach;
+        foreach($posts as $post):
+    ?>
+
 <div class="nav_card_item category_item" title="<?php echo $post->post_title; ?>">
     <a href="<?php echo get_permalink($post); ?>">
         <div class="date">

@@ -1,4 +1,5 @@
 .sidebar {
+    margin-top: 5vh;
     border-bottom: 1px groove;
 }
 
@@ -10,7 +11,8 @@
 }
 
 .sidebar li ul li a {
-    margin-right: 1rem;
+    margin-left: .5rem;
+    margin-right: 2rem;
 }
 
 .page_container {
@@ -19,9 +21,13 @@
     margin-right: auto;
 }
 
+.page_content_top{
+    padding-top: calc(140/1080*100vh);
+}
+
 .page_title {
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 3.75rem;
+    font-weight: 500;
 }
 
 .rf-info_block .rf-text_block {
@@ -48,28 +54,25 @@
 .rf-info_block .rf-text_block .date {
     flex: 1;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .rf-info_block .rf-text_block .year {
-    font-size: 1rem;
+    font-size: 1.375rem;
 }
 
 .rf-info_block .rf-text_block .title-field {
-    flex: 8;
+    flex: 7;
 }
 
 .rf-info_block .rf-text_block .post_excerpt {
     text-align: justify;
 }
 
-.date {
-    font-size: .8rem;
-}
-
 .title-field {
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 1.875rem;
 }
 
 .category_name {
@@ -86,16 +89,18 @@
 .sidebar .menu-item-object-category {
     font-size: 1.7rem;
     line-height: 1.5;
+    margin-right: 2rem;
 }
 
 .sidebar .menu-item-object-category a {
     color: black;
+    font-size: 1.375rem;
 }
 
 .sidebar .menu-item-object-category::before {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     content: "\25CB\ ";
-    color: rgb(var(--vivid-blue));;
+    color: rgb(var(--vivid-blue));
 }
 
 .sidebar .current-menu-item::before {
@@ -124,7 +129,7 @@
     color: black;
 }
 .menu-item-object-category::marker{
-    color: rgb(var(--vivid-blue));;
+    color: rgb(var(--vivid-blue));
 }
 .current-menu-item{
     list-style-type: disc;

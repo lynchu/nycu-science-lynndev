@@ -11,7 +11,7 @@
 
         <div class="page_content_top">
             <div class="page_title">
-                <?php echo $category_name ?>
+                最新消息
 
             </div>
             <div class="sidebar" id="single_cat_title">
