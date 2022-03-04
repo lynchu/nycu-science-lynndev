@@ -1,0 +1,204 @@
+main {
+    padding: 140px calc(180/1920*100vw) 200px;
+    font-weight: normal; 
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.59;
+    letter-spacing: 3.3px;
+    text-align: left;
+    color: var(--dark);
+    font-size: 1.375rem;
+}
+
+#post-title-area {
+    display: flex;
+}
+
+#post-title {
+    font-size: 3.75rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 3px;
+    text-align: left;
+    color: var(--dark);
+    margin-bottom: 50px;
+
+    flex-basis: calc(1140/1920*100vw);
+}
+
+#top-right-rect {
+    display: unset;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(var(--vivid-blue));
+    margin-right: 0;
+    margin-left: auto;
+}
+
+#post-content-area {
+    display: flex;
+    margin-bottom: 200px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    flex-basis: calc(1360/1920*100vw);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.info-card > .img-box {
+    flex-basis: 33%;
+    object-fit: contain;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.info-card > .img-box img {
+    object-fit: contain;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.info-card > .text-box {
+    flex-basis: 57%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-card > .text-box > .name,
+.info-card > .text-box > .job-description-title,
+.info-card > .text-box > .job-description-content {
+    flex-basis: 100%;
+}
+
+.info-card > .text-box > .name {
+    font-family: 'Noto Sans TC';
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;  
+    letter-spacing: 6px;
+    text-align: left;
+    color: var(--dark);
+
+    margin-bottom: 30px;
+}
+
+.info-card > .text-box > .title {
+    font-family: 'Noto Sans TC';
+    font-size: 1.625rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;  
+    letter-spacing: 3.9px;
+    text-align: left;
+    color: var(--dark);
+}
+
+.info-card > .text-box > .job-description-title {
+    font-family: 'Noto Sans TC';
+    font-size: 1.375rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 3.3px;
+    line-height: 1.59;
+    text-align: left;
+    color: var(--dark);
+
+    margin-bottom: 15px;
+}
+
+.info-card > .text-box > .job-description-content {
+    font-family: 'Noto Sans TC';
+    font-size: 1.375rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.59;
+    letter-spacing: 3.3px;
+    text-align: left;
+    color: var(--dark);
+  
+    margin-bottom: 15px;
+}
+
+.info-card > .text-box > .email,
+.info-card > .text-box > .tel {
+    font-family: 'Noto Sans TC';
+    font-size: 1.125rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.94;
+    letter-spacing: 0.9px;
+    text-align: left;
+    color: var(--dark);
+
+    flex-basis: 28%;
+    white-space: nowrap;
+    display: flex;
+}
+
+.info-card > .text-box > .email {
+    margin-right: 60px;
+}
+
+.info-card > .text-box > .email > img, 
+.info-card > .text-box > .tel > img {
+    width: 22px;
+    height: 22px;
+    margin-right: 15px;
+}
+
+.info-card > .text-box > .email > p,
+.info-card > .text-box > .tel > p,
+.info-card > .text-box > .email > img, 
+.info-card > .text-box > .tel > img {
+    align-self: center;
+}
+
+.horizontal-divider {
+    width: 100%;
+    height: 0;
+    margin-bottom: 50px;
+    border: solid 1px rgb(var(--hr-gray));
+    background-color: rgb(var(--hr-gray));
+}
+
+@media (max-width: 767px) {
+    main {
+        padding: 75px calc(180/1920*100vw) 100px;
+        letter-spacing: unset;
+    }
+    main h1 {
+        font-size: 2rem;
+        margin-bottom: 75px;
+    }
+    #post-content-area {
+        margin-bottom: 100px;
+        flex-wrap: wrap;
+    }
+    #post-title {
+        flex-basis: 100%;
+    }
+    #top-right-rect {
+        display: none;
+    }
+    .info-card > .img-box {
+        display: none;
+    }
+    .info-card > .text-box {
+        flex-grow: 1;
+    }
+    .horizontal-divider {
+        margin-bottom: 25px;
+    }
+}
