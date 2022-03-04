@@ -3,7 +3,8 @@ get_header();
 
 $args = array(  
     'post_type' => 'staff',
-    'post_status' => 'publish'
+    'post_status' => 'publish',
+    'order' => 'ASC'
 );
 $loop = new WP_Query( $args ); 
 ?>
@@ -46,11 +47,11 @@ if( $loop->have_posts() ):
             <div class="job-description-content"><?php echo $acf_fields['job_description']; ?></div>
             <div class="email">
                 <img src="<?php echo get_template_directory_uri() . '/images/staff-email-icon.png';?>" />
-                <?php echo $acf_fields['email']; ?>
+                <p><?php echo $acf_fields['email']; ?></p>
             </div>
             <div class="tel">
                 <img src="<?php echo get_template_directory_uri() . '/images/staff-tel-icon.png';?>" />
-                <?php echo $acf_fields['tel']; ?>
+                <p><?php echo $acf_fields['tel']; ?></p>
             </div>
         </div>
     </div>

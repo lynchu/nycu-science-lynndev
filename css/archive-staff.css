@@ -42,12 +42,14 @@ main {
     display: flex;
     margin-bottom: 200px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .info-card {
     flex-basis: calc(1360/1920*100vw);
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
 
 .info-card > .img-box {
@@ -149,11 +151,18 @@ main {
     margin-right: 60px;
 }
 
-.info-card > .text-box img {
+.info-card > .text-box > .email > img, 
+.info-card > .text-box > .tel > img {
     width: 22px;
     height: 22px;
-    align-self: center;
     margin-right: 15px;
+}
+
+.info-card > .text-box > .email > p,
+.info-card > .text-box > .tel > p,
+.info-card > .text-box > .email > img, 
+.info-card > .text-box > .tel > img {
+    align-self: center;
 }
 
 .horizontal-divider {
