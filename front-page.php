@@ -146,6 +146,8 @@
 
     .navcard_right .nav_card_item .post_excerpt {
         text-align: justify;
+        font-size: 1.375rem;
+        letter-spacing: 3.3px;
     }
 
     .date {
@@ -156,6 +158,8 @@
     .post_title {
         font-weight: 500;
         font-size: 1.875rem;
+        letter-spacing: 4.5px;
+        line-height: 1.5;
     }
 
     .category_name {
