@@ -1,5 +1,5 @@
 main {
-    padding: 140px calc(180/1920*100vw) 200px;
+    padding: 100px calc(180/1920*100vw) 200px;
     font-weight: normal; 
     font-stretch: normal;
     font-style: normal;
@@ -40,11 +40,11 @@ main h6 {
 
 #post-title {
     font-size: 3.125rem;
-    font-weight: 500;
+    font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.6;
-    letter-spacing: 2.5px;
+    letter-spacing: 7.5px;
     text-align: left;
     color: var(--dark);
     margin-bottom: 50px;
@@ -64,7 +64,7 @@ main h6 {
 
 #post-content-area {
     display: flex;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     justify-content: space-between;
 }
 

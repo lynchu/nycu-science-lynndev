@@ -10,14 +10,14 @@
 #post-list-area > h2 {
     font-family: 'Noto Sans TC';
     font-size: 1.875rem;
-    font-weight: 500;
+    font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.5;
     letter-spacing: 4.5px;
     text-align: left;
     color: rgb(var(--dark));
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 #post-list-wrap {
