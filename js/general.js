@@ -3,9 +3,13 @@
 $(() => { //wait for DOM load
     const dropdowns = document.getElementsByClassName("sub-menu");
     const blocker = document.getElementById("blocker");
+    const left_sbs = document.getElementsByClassName("left_sb_a");
 
     let hidedropdowns = () => {
         Array.from(dropdowns).forEach(el => {
+            el.removeAttribute("style");
+        });
+        Array.from(left_sbs).forEach(el => {
             el.removeAttribute("style");
         });
         blocker.removeAttribute("style");
@@ -15,13 +19,16 @@ $(() => { //wait for DOM load
         if (event.type == "touchstart") {
             $(this).off('click')
         }
-        let target = event.target.parentNode;
+        let target = event.target;
+        let targetParent = target.parentNode;
         if ($(window).width() > 800) {
             hidedropdowns();
         }
-        if (target.matches('.menu-item-has-children')) {
-            target.querySelector('ul.sub-menu').style.display = "flex";
+        if (targetParent.matches('.menu-item-has-children')) {
+            targetParent.querySelector('ul.sub-menu').style.display = "flex";
             $('#blocker').css('display','block');
+        } else if (target.matches('.left_sb_a')){
+            target.style.borderLeft = "solid 2px rgb(var(--dark))";
         } else {
             hidedropdowns();
         }
