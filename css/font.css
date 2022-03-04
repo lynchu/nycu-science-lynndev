@@ -42,9 +42,14 @@ h6 {
 }
 
 /*for screen size like iPhone5*/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1440px) and (min-width: 769px) {
     html {
         font-size: 14px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
     }
 }
 
