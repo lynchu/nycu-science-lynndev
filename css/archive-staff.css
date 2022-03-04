@@ -42,12 +42,14 @@ main {
     display: flex;
     margin-bottom: 200px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .info-card {
     flex-basis: calc(1360/1920*100vw);
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
 
 .info-card > .img-box {
