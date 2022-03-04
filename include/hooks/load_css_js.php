@@ -34,6 +34,9 @@ function theme_css_js() {
     if (is_category( array('all', 'announcements', 'events', 'awards', 'sdgs') )){
         wp_enqueue_style('news', get_template_directory_uri().'/css/news.css', 'font', '2021012100', 'screen');
     }
-    
+    /* office member */
+    if (is_post_type_archive('staff')) {
+        wp_enqueue_style('staff', get_template_directory_uri().'/css/archive-staff.css', 'general-css', '2021022500', 'screen'); 
+    }
 }
 add_action('wp_enqueue_scripts', 'theme_css_js');
