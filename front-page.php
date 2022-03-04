@@ -177,9 +177,9 @@
         height: 2.5rem;
         line-height: 3;
         color: rgb(var(--white));
-        background-color: rgb(var(--dark));
+        background-color: rgb(var(--cornflower));
         text-align: center;
-        border-radius: 10px;
+        border-radius: 21px;
         letter-spacing: .2rem;
         position: relative;
         right: 0;
