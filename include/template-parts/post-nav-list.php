@@ -12,7 +12,7 @@ $loop = new WP_Query( $args );
 if ( $loop->have_posts() ) :
 ?>
 <div id="post-list-area">
-	<h2><?php _e( '下則公告', 'nycu-science' ); ?></h2>
+	<h2><?php _e( '更多消息', 'nycu-science' ); ?></h2>
 	<div id="post-list-wrap">
 		<div id="arrow-previous" class="arrow"></div>
 		<ul id="post-list">
