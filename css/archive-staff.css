@@ -1,5 +1,5 @@
 main {
-    padding: 100px calc(180/1920*100vw) 200px;
+    padding: 100px calc(180/1920*100vw) 100px;
     font-weight: normal; 
     font-stretch: normal;
     font-style: normal;
@@ -40,7 +40,6 @@ main {
 
 #post-content-area {
     display: flex;
-    margin-bottom: 200px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -175,7 +174,7 @@ main {
 
 @media (max-width: 767px) {
     main {
-        padding: 75px calc(180/1920*100vw) 100px;
+        padding: 75px calc(180/1920*100vw) 50px;
         letter-spacing: unset;
     }
     main h1 {
@@ -183,7 +182,6 @@ main {
         margin-bottom: 75px;
     }
     #post-content-area {
-        margin-bottom: 100px;
         flex-wrap: wrap;
     }
     #post-title {
