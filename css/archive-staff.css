@@ -90,7 +90,7 @@ main {
     margin-bottom: 30px;
 }
 
-.info-card > .text-box > .title {
+.info-card > .text-box > .name > .title {
     font-family: 'Noto Sans TC';
     font-size: 1.625rem;
     font-weight: 500;
