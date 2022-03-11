@@ -1,9 +1,3 @@
-<?php
-/*
-    Template Name: departments
-    Template Post Type: page
-*/
-?>
 <?php get_header();?>
 <div class="left_block">
     <h1>教學單位</h1>
