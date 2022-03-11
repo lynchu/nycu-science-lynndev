@@ -148,7 +148,6 @@
         flex-direction: row;
     }
     .left_block{
-        padding-top: 5rem;
         padding-left: 3%;
         flex: 1;
     }
