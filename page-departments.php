@@ -1,7 +1,7 @@
 <?php get_header();?>
 <div class="left_block">
-    <h1>教學單位</h1>
     <div class="left_sb">
+        <h1>教學單位</h1>
         <a class="left_sb_a" href="#ep">電子物理系 (1964年成立)</a>
         <a class="left_sb_a" href="#math">應用數學系 (1972年成立)</a>
         <a class="left_sb_a" href="#chem">應用化學系 (1982年成立)</a>
@@ -14,6 +14,7 @@
 <div class="right_block">
     <section id="ep">
         <div class="right_block_left">
+        <hr>
         <h2><a href="https://ep.nycu.edu.tw/">電子物理系</a></h2>
         <div class="office_addr">辦公室位址：科學三館351室</div><br>
         <p>
@@ -134,9 +135,6 @@
     }
     section img{
 
-    }
-    section:first-of-type{
-        padding-top: 5rem;
     }
     section hr{
         margin-bottom: 5rem;
