@@ -116,6 +116,7 @@
 <style>
     h1{
         margin-bottom: 3rem;
+        font-size: 2.5rem;
     }
     section{
         padding-top: 5rem;
@@ -150,7 +151,7 @@
     }
     .left_block{
         padding-top: 5rem;
-        padding-left: 1vw;
+        padding-left: 3%;
         flex: 1;
     }
     .left_sb{

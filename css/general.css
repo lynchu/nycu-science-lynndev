@@ -95,11 +95,11 @@ img {
 
 #navbar .logo_title {
     display: inherit;
+    padding-left: 3%;
     align-items: center;
 }
 
 #navbar .logo_title :nth-child(1) {
-    padding-left: 1vw;
     height: 3rem;
     /* height: calc(72/1920*100vw); */
 }
