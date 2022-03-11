@@ -96,6 +96,10 @@ img {
 #navbar .logo_title {
     display: inherit;
     padding-left: 3%;
+}
+
+#navbar .logo_title a {
+    display: inherit;
     align-items: center;
 }
 

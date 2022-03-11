@@ -13,12 +13,14 @@
         <div id="content">
             <header>
                 <nav id="navbar">
-                    <a href="<?php echo site_url();?>">
+                    
                         <div class="logo_title">
+                        <a href="<?php echo site_url();?>">
                             <img src="<?php echo get_template_directory_uri()?>/images/logo.svg" alt="">
                             <img src="<?php echo get_template_directory_uri()?>/images/title.svg" alt="">
+                        </a>
                         </div>
-                    </a>
+                    
                     <?php wp_nav_menu(); ?>
                     <div class="mobile_wrapper">
                         <a id="EN" href="https://science.nycu.edu.tw/en/en-homepage/">
