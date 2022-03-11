@@ -12,7 +12,7 @@
     </div>
 </div>
 <div class="right_block">
-    <section id="ep">
+    <section id="ep" class="depart_sec">
         <div class="right_block_left">
         <h2><a href="https://ep.nycu.edu.tw/">電子物理系</a></h2>
         <div class="office_addr">辦公室位址：科學三館351室</div><br>
@@ -26,7 +26,7 @@
         <img src="<?php echo get_template_directory_uri()?>/images/department/1.webp" alt="">
         </div>
     </section>
-    <section id="math">
+    <section id="math" class="depart_sec">
         <div class="right_block_left">
         <hr>
         <h2><a href="https://www.math.nycu.edu.tw/event/index.php">應用數學系</a></h2>
@@ -40,7 +40,7 @@
         <img src="<?php echo get_template_directory_uri()?>/images/department/2.webp" alt="">
         </div>
     </section>
-    <section id="chem">
+    <section id="chem" class="depart_sec">
         <div class="right_block_left">
         <hr>
         <h2><a href="https://dac.nycu.edu.tw/?locale=zh_tw">應用化學系</a></h2>
@@ -55,7 +55,7 @@
         <img src="<?php echo get_template_directory_uri()?>/images/department/3.webp" alt="">
         </div>
     </section>
-    <section id="stat">
+    <section id="stat" class="depart_sec">
         <div class="right_block_left">
         <hr>
         <h2><a href="https://stat.nycu.edu.tw/">統計學研究所</a></h2>
@@ -69,7 +69,7 @@
         <img src="<?php echo get_template_directory_uri()?>/images/department/4.webp" alt="">
         </div>
     </section>
-    <section id="phys">
+    <section id="phys" class="depart_sec">
         <div class="right_block_left">
         <hr>
         <h2><a href="https://phys.nycu.edu.tw/">物理研究所</a></h2>
@@ -83,7 +83,7 @@
         <img src="<?php echo get_template_directory_uri()?>/images/department/5.webp" alt="">
         </div>
     </section>
-    <section id="pos">
+    <section id="pos" class="depart_sec">
         <div class="right_block_left">
         <hr>
         <h2><a href="https://pos.nycu.edu.tw/">理學院碩士在職專班</a></h2>
@@ -97,7 +97,7 @@
         <img src="<?php echo get_template_directory_uri()?>/images/department/6.webp" alt="">
         </div>
     </section>
-    <section id="isdp">
+    <section id="isdp" class="depart_sec">
         <div class="right_block_left">
         <hr>
         <h2><a href="https://isdp.nctu.edu.tw/">理學院科學學士學位學程</a></h2>

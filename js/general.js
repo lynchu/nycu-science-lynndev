@@ -4,13 +4,10 @@ $(() => {
     //wait for DOM load
     const dropdowns = document.getElementsByClassName("sub-menu");
     const blocker = document.getElementById("blocker");
-    const left_sbs = document.getElementsByClassName("left_sb_a");
+
 
     let hidedropdowns = () => {
         Array.from(dropdowns).forEach((el) => {
-            el.removeAttribute("style");
-        });
-        Array.from(left_sbs).forEach((el) => {
             el.removeAttribute("style");
         });
         blocker.removeAttribute("style");
@@ -32,10 +29,6 @@ $(() => {
             } else {
                 $(targetParent.querySelector('ul.sub-menu')).slideToggle();
             }
-        } else if (target.matches(".left_sb_a")) {
-            hidedropdowns();
-            target.style.borderLeft = "solid 2px rgb(var(--dark))";
-            target.style.fontWeight = "500";
         } else if (targetParent.id == "navBtn") {
             $("#menu-main").slideToggle();
         } else {
@@ -57,8 +50,9 @@ $(() => {
         );
     });
 
-    let currentScrollPos = window.pageYOffset;
-    let prevScrollpos = currentScrollPos;
+    // let currentScrollPos = window.pageYOffset;
+    // let prevScrollpos = currentScrollPos;
+
     $(window).scroll(() => {
         if ($(this).scrollTop() > 400) {
             $("#topBtn").fadeIn();
@@ -67,16 +61,14 @@ $(() => {
         }
 
         //common variable
-        currentScrollPos = window.pageYOffset;
+        //currentScrollPos = window.pageYOffset;
         //scroll down hide navbar
         // if (prevScrollpos > currentScrollPos) {
         //     $('#navbar').css('visibility', 'visible');
         // } else {
         //     $('#navbar').css('visibility', 'hidden');
         // }
-        prevScrollpos = currentScrollPos;
-
-        // console.log($("#ep").getBoundingClientRect());
+        //prevScrollpos = currentScrollPos;
     });
 
     //remove single_cat_title sidebar default title

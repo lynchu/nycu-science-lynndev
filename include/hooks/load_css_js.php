@@ -38,5 +38,9 @@ function theme_css_js() {
     if (is_post_type_archive('staff')) {
         wp_enqueue_style('staff', get_template_directory_uri().'/css/archive-staff.css', 'general-css', '2021022500', 'screen'); 
     }
+    /* departments */
+    if (is_page('departments')) {
+        wp_enqueue_script('depart-js', get_template_directory_uri().'/js/department.js', 'general-js', false, null);
+    }
 }
 add_action('wp_enqueue_scripts', 'theme_css_js');
