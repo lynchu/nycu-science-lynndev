@@ -42,5 +42,9 @@ function theme_css_js() {
     if (is_page('departments')) {
         wp_enqueue_script('depart-js', get_template_directory_uri().'/js/department.js', 'general-js', false, null);
     }
+    /* dean */
+    if (is_post_type_archive('dean')) {
+        wp_enqueue_style('dean', get_template_directory_uri().'/css/archive-dean.css', 'general-css', '2021031000', 'screen'); 
+    }
 }
 add_action('wp_enqueue_scripts', 'theme_css_js');
