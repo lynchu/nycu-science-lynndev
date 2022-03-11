@@ -38,5 +38,9 @@ function theme_css_js() {
     if (is_post_type_archive('staff')) {
         wp_enqueue_style('staff', get_template_directory_uri().'/css/archive-staff.css', 'general-css', '2021022500', 'screen'); 
     }
+    /* dean */
+    if (is_post_type_archive('dean')) {
+        wp_enqueue_style('dean', get_template_directory_uri().'/css/archive-dean.css', 'general-css', '2021031000', 'screen'); 
+    }
 }
 add_action('wp_enqueue_scripts', 'theme_css_js');
