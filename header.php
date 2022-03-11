@@ -19,14 +19,15 @@
                             <img src="<?php echo get_template_directory_uri()?>/images/title.svg" alt="">
                         </div>
                     </a>
-
-                    <!-- <button id="navBtn">
-                        <span class="navbar-toggler-icon"></span>
-                    </button> -->
                     <?php wp_nav_menu(); ?>
-                    <a id="EN" href="https://science.nycu.edu.tw/en/en-homepage/">
-                        EN
-                    </a>
+                    <div class="mobile_wrapper">
+                        <a id="EN" href="https://science.nycu.edu.tw/en/en-homepage/">
+                            EN
+                        </a>
+                        <button id="navBtn">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
                     <div id="blocker"></div>
                 </nav>
             </header>

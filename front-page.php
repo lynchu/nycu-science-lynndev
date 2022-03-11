@@ -25,8 +25,7 @@
     }
 
     .navcard_container {
-        width: 80%;
-        margin: 5vh 10%;
+        padding: 5vh 10%;
         display: flex;
         justify-content: space-between;
     }
@@ -35,6 +34,7 @@
         display: flex;
         flex-direction: column;
         align-items: end;
+        margin-bottom: 2vh;
     }
 
     .navcard_r {
@@ -223,7 +223,14 @@
         background-position: 0;
     }
 
-    @media screen and (max-width: 800px) {}
+    @media screen and (max-width: 800px) {
+        .post_title{
+            font-size: 1.5rem;
+        }
+        .gallery_container{
+            display: none;
+        }
+    }
 
     @media screen and (max-width: 415px) {
         .navcard_container{
