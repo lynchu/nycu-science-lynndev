@@ -21,6 +21,8 @@
     /* #5866f7 */
     --hr-gray: 199, 200, 203;
     /* #c7c8cb */
+    --yellow-gray: 172, 169, 163;
+    /* #aca9a3 */
 }
 
 html {
@@ -373,7 +375,7 @@ img {
         flex-direction: column;
         align-items: flex-start;
         flex-basis: 100%;
-        background: rgb(var(--hr-gray));
+        background: rgb(var(--yellow-gray));
         display: none;
         margin: 0;
     }
