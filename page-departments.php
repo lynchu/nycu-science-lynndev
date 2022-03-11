@@ -2,19 +2,18 @@
 <div class="left_block">
     <div class="left_sb">
         <h1>教學單位</h1>
-        <a class="left_sb_a" href="#ep">電子物理系 (1964年成立)</a>
+        <a class="left_sb_a" href="#the_top">電子物理系 (1964年成立)</a>
         <a class="left_sb_a" href="#math">應用數學系 (1972年成立)</a>
         <a class="left_sb_a" href="#chem">應用化學系 (1982年成立)</a>
         <a class="left_sb_a" href="#stat">統計學研究所 (1992年成立)</a>
         <a class="left_sb_a" href="#phys">物理研究所 (1993年成立)</a>
-        <a class="left_sb_a" href="#pos">理學院在職碩士專班 (2001年成立)</a>
+        <a class="left_sb_a" href="#pos">理學院碩士在職專班 (2001年成立)</a>
         <a class="left_sb_a" href="#isdp">理學院科學學士學位學程 (2006年成立)</a>
     </div>
 </div>
 <div class="right_block">
     <section id="ep">
         <div class="right_block_left">
-        <hr>
         <h2><a href="https://ep.nycu.edu.tw/">電子物理系</a></h2>
         <div class="office_addr">辦公室位址：科學三館351室</div><br>
         <p>
@@ -87,7 +86,7 @@
     <section id="pos">
         <div class="right_block_left">
         <hr>
-        <h2><a href="https://pos.nycu.edu.tw/">理學院在職碩士專班</a></h2>
+        <h2><a href="https://pos.nycu.edu.tw/">理學院碩士在職專班</a></h2>
         <div class="office_addr">辦公室位址：科學三館103室</div><br>
         <p>
             配合教育部推動之回流教育體系政策，以強化高等教育體系在職進修功能，並建構終身學習之社會價值，理學院於2001年成立碩士在職專班「科技與數位學習組」，2007年成立「應用科技組」；利用本校鄰近科學園區之地利之便，提供產業界人士多元彈性學習新知的機會，滿足其對科學知識及個人學習生涯成長之需求。<br><br>
@@ -159,7 +158,7 @@
     .left_sb a{
         display: inline-block;
         font-size: 1.125rem;
-        font-weight: 500;
+        font-weight: 400;
         color: rgb(var(--dark));
         line-height: 3;
         letter-spacing: 2.7px;
@@ -181,6 +180,9 @@
         background-size: 1rem 1rem;
         background-image: url(<?php bloginfo('template_url');
         ?>/images/octicons.svg);
+    }
+    p{
+        text-align: justify;
     }
 </style>
 <?php get_footer(); ?>

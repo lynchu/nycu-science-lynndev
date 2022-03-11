@@ -35,6 +35,7 @@ $(() => {
         } else if (target.matches(".left_sb_a")) {
             hidedropdowns();
             target.style.borderLeft = "solid 2px rgb(var(--dark))";
+            target.style.fontWeight = "500";
         } else if (targetParent.id == "navBtn") {
             $("#menu-main").slideToggle();
         } else {
@@ -74,6 +75,8 @@ $(() => {
         //     $('#navbar').css('visibility', 'hidden');
         // }
         prevScrollpos = currentScrollPos;
+
+        // console.log($("#ep").getBoundingClientRect());
     });
 
     //remove single_cat_title sidebar default title
