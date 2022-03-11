@@ -22,12 +22,12 @@ $(() => {
         })
     });
 
-    let viewportHeight = window.innerHeight;
+    let halfViewportHeight = window.innerHeight / 2;
 
     $(window).scroll(() => {
         Array.from(depart_secs).forEach((el_a) => {
             let h = el_a.getBoundingClientRect().y;
-            if (-100 < h && h < viewportHeight && el_a.id != priv_dep) {
+            if (-100 < h && h < halfViewportHeight && el_a.id != priv_dep) {
                 priv_dep = el_a.id;
                 clear();
                 Array.from(left_sbs).forEach((el_b) => {
