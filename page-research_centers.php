@@ -96,6 +96,7 @@
         flex-grow: 1;
         padding: 2rem;
         background-color: rgb(var(--dark));
+        overflow-y: scroll;
     }
 
     @media only screen and (max-width: 1440px) and (min-width: 769px) {
@@ -103,5 +104,49 @@
         font-size: 1rem;
         }
     }
+    @media only screen and (max-width: 768px){
+        main section a{
+            flex-direction: column;
+            height: unset;
+        }
+
+        main section:nth-of-type(even) a {
+            flex-direction: column;
+        }
+
+        .block_right{
+            overflow-y: unset;
+        }
+    }
+
+    /* 細捲軸開始 */
+    ::-webkit-scrollbar {
+        height: 4px;
+        overflow: visible;
+        width: 9px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #d8d8d8;
+        background-clip: padding-box;
+        border: solid transparent;
+        border-width: 0 0 0 0px;
+        border-radius: 10px;
+        min-height: 28px;
+        padding-top: 100px;
+        //box-shadow:inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #d8d8d8;
+        //box-shadow:inset 1px 1px 1px rgba(0,0,0,.25);
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background-color: #d8d8d8;
+        //box-shadow:inset 1px 1px 3px rgba(0,0,0,0.35);
+    }
+
+    /* 細捲軸結束 */
 </style>
 <?php get_footer(); ?>
