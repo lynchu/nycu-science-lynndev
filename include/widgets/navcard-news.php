@@ -26,7 +26,7 @@
                 echo get_post_time('Y.m.d', false, $post);
 ?>
         </div><br>
-        <div class="post_title ellipsis"><?php echo $post->post_title; ?></div><br><br><br>
+        <div class="post_title ellipsis post_title_news"><?php echo $post->post_title; ?></div><br><br><br>
         <!-- <div class="category_name"><?php #echo $category_name ?></div> -->
     </a>
 </div>
@@ -48,3 +48,17 @@
     <a href="<?php echo home_url().'/category/news/all/'; ?>">more</a>
 </div>
 </div>
+<script>
+
+    if(window.matchMedia("(max-width: 1440px)").matches){
+        const len = 27;
+        const ellipsis = document.querySelectorAll('.post_title_news');
+        ellipsis.forEach((item) => {
+            if(item.innerHTML.length > len) {
+                let txt = item.innerHTML.substring(0, len) + '...';
+                item.innerHTML = txt;
+            }
+        })
+    }
+
+</script>
