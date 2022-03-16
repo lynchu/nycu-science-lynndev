@@ -28,7 +28,7 @@
     </section>
     <section id="math" class="depart_sec">
         <div class="right_block_left">
-        <hr>
+        <!--<hr>-->
         <h2><a href="https://www.math.nycu.edu.tw/event/index.php">應用數學系</a></h2>
         <div class="office_addr">辦公室位址：科學一館207室</div><br>
         <p>
@@ -42,7 +42,7 @@
     </section>
     <section id="chem" class="depart_sec">
         <div class="right_block_left">
-        <hr>
+        <!--<hr>-->
         <h2><a href="https://dac.nycu.edu.tw/?locale=zh_tw">應用化學系</a></h2>
         <div class="office_addr">辦公室位址：科學二館422室</div><br>
         <p>
@@ -57,7 +57,7 @@
     </section>
     <section id="stat" class="depart_sec">
         <div class="right_block_left">
-        <hr>
+        <!--<hr>-->
         <h2><a href="https://stat.nycu.edu.tw/">統計學研究所</a></h2>
         <div class="office_addr">辦公室位址：綜合一館430室</div><br>
         <p>
@@ -71,7 +71,7 @@
     </section>
     <section id="phys" class="depart_sec">
         <div class="right_block_left">
-        <hr>
+        <!--<hr>-->
         <h2><a href="https://phys.nycu.edu.tw/">物理研究所</a></h2>
         <div class="office_addr">辦公室位址：科學三樓352室</div><br>
         <p>
@@ -85,7 +85,7 @@
     </section>
     <section id="pos" class="depart_sec">
         <div class="right_block_left">
-        <hr>
+        <!--<hr>-->
         <h2><a href="https://pos.nycu.edu.tw/">理學院碩士在職專班</a></h2>
         <div class="office_addr">辦公室位址：科學三館103室</div><br>
         <p>
@@ -99,7 +99,7 @@
     </section>
     <section id="isdp" class="depart_sec">
         <div class="right_block_left">
-        <hr>
+        <!--<hr>-->
         <h2><a href="https://isdp.nctu.edu.tw/">理學院科學學士學位學程</a></h2>
         <div class="office_addr">辦公室位址：科學三館103室</div><br>
         <p>
@@ -119,9 +119,12 @@
         font-size: 2.5rem;
     }
     section{
-        padding-top: 5rem;
+        padding-top: 10rem;
         display: flex;
         flex-direction: row;
+    }
+    section:first-of-type{
+        padding-top: 5rem;
     }
     section .right_block_left{
         flex: 2;
@@ -131,9 +134,6 @@
         display: flex;
         justify-content: center;
         align-items: end;
-    }
-    section img{
-
     }
     section hr{
         margin-bottom: 5rem;
@@ -183,6 +183,15 @@
     }
     p{
         text-align: justify;
+    }
+    /*for screen size like iPhone5*/
+    @media only screen and (max-width: 1440px) and (min-width: 769px) {
+        section{
+            padding-top: 5rem;
+        }
+        section:first-of-type{
+            padding-top: 0rem;
+        }
     }
 </style>
 <?php get_footer(); ?>
