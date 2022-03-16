@@ -190,7 +190,7 @@
             padding-top: 5rem;
         }
         section:first-of-type{
-            padding-top: 0rem;
+            padding-top: 5rem;
         }
     }
 </style>
