@@ -64,6 +64,11 @@
     border-radius: 20px;
     display: flex;
     align-items: center;
+    margin-bottom: min(60px, 3.125vw);
+}
+
+.info-card-wrapper:first-of-type > .info-card > .img-box {
+    margin-bottom: 0px;
 }
 
 .info-card > .img-box img {
@@ -89,15 +94,16 @@
 .info-card > .text-box > .name { 
     display: flex;
     flex-wrap: wrap;
-    line-height: 1.75;
+    line-height: 1.13;
 }
 
 .info-card > .text-box > .name > div {
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 .info-card > .text-box > .title{
-    line-height: 1.13;
+    margin-top: 1.2rem;
+    line-height: 1;
     margin-bottom: 45px;
 }
 
