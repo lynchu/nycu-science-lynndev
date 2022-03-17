@@ -46,13 +46,9 @@ if( $loop->have_posts() ):
             </div>
             <div class="text-box">
                 <div class="name xlarge-text">
-                    <?php 
-                        echo $acf_fields['title1']; 
-                        echo " ";
-                        echo $acf_fields['name']; 
-                        echo " ";
-                        echo $acf_fields['eng_name'];
-                    ?>
+                    <div><?php echo $acf_fields['title1']; ?></div>
+                    <div><?php echo $acf_fields['name']; ?></div>
+                    <div><?php echo $acf_fields['eng_name']; ?></div>
                 </div>
                 <div class="title large-text"><?php echo $acf_fields['title2']; ?></div>
                 <div class="education-title normal-text bold"><?php _e('學歷', 'nycu-science' ); ?></div>
