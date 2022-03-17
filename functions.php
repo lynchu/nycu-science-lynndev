@@ -17,6 +17,7 @@ add_theme_support('post-thumbnails');
 require get_template_directory() . '/include/ACF/event_date.php';
 require get_template_directory() . '/include/ACF/document.php';
 require get_template_directory() . '/include/ACF/staff-info.php';
+require get_template_directory() . '/include/ACF/dean-info.php';
 
 //require get_template_directory() . '/include/widgets/pagenavi.php';
 
