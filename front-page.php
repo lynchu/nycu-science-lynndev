@@ -25,8 +25,7 @@
     }
 
     .navcard_container {
-        width: 80%;
-        margin: 5vh 10%;
+        padding: 5vh 10%;
         display: flex;
         justify-content: space-between;
     }
@@ -35,6 +34,7 @@
         display: flex;
         flex-direction: column;
         align-items: end;
+        margin-bottom: 2vh;
     }
 
     .navcard_r {
@@ -146,6 +146,8 @@
 
     .navcard_right .nav_card_item .post_excerpt {
         text-align: justify;
+        font-size: 1.375rem;
+        letter-spacing: 3.3px;
     }
 
     .date {
@@ -156,6 +158,8 @@
     .post_title {
         font-weight: 500;
         font-size: 1.875rem;
+        letter-spacing: 4.5px;
+        line-height: 1.5;
     }
 
     .category_name {
@@ -173,9 +177,9 @@
         height: 2.5rem;
         line-height: 3;
         color: rgb(var(--white));
-        background-color: rgb(var(--dark));
+        background-color: rgb(var(--cornflower));
         text-align: center;
-        border-radius: 10px;
+        border-radius: 21px;
         letter-spacing: .2rem;
         position: relative;
         right: 0;
@@ -219,7 +223,14 @@
         background-position: 0;
     }
 
-    @media screen and (max-width: 800px) {}
+    @media screen and (max-width: 800px) {
+        .post_title{
+            font-size: 1.5rem;
+        }
+        .gallery_container{
+            display: none;
+        }
+    }
 
     @media screen and (max-width: 415px) {
         .navcard_container{

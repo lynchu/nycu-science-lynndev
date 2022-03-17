@@ -26,8 +26,9 @@
 }
 
 .page_title {
-    font-size: 3.75rem;
+    font-size: 3.125rem;
     font-weight: 500;
+    letter-spacing: 7.5px;
 }
 
 .rf-info_block .rf-text_block {
@@ -60,10 +61,11 @@
 
 .rf-info_block .rf-text_block .year {
     font-size: 1.375rem;
+    letter-spacing: 3.3px;
 }
 
 .rf-info_block .rf-text_block .title-field {
-    flex: 7;
+    flex: 5;
 }
 
 .rf-info_block .rf-text_block .post_excerpt {
@@ -73,6 +75,8 @@
 .title-field {
     font-weight: 500;
     font-size: 1.875rem;
+    line-height: 1.5;
+    letter-spacing: 4.5px;
 }
 
 .category_name {
@@ -95,6 +99,7 @@
 .sidebar .menu-item-object-category a {
     color: black;
     font-size: 1.375rem;
+    letter-spacing: 3.3px;
 }
 
 .sidebar .menu-item-object-category::before {

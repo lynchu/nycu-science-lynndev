@@ -37,3 +37,8 @@ function is_post_in_category( $category_ids, $post_id = null ) {
     );
     return 0 < count( get_posts( $args ) );
 }
+
+function new_excerpt_more($more) {
+    return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');

@@ -6,7 +6,7 @@ $(() => {
         loop: true,
         autoplay: true,
         autoplayHoverPause: true,
-        dots: false,
+        dots: true,
         items: 1
     });
 
@@ -17,4 +17,6 @@ $(() => {
     $('.gallery_next').click(() => {
         gallery.trigger('next.owl.carousel');
     });
+
+    $(".owl-dots").insertAfter('.gallery');
 });

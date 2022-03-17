@@ -8,25 +8,28 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> id="the_top">
     <div id="container">
         <div id="content">
             <header>
                 <nav id="navbar">
-                    <a href="<?php echo site_url();?>">
+                    
                         <div class="logo_title">
+                        <a href="<?php echo site_url();?>">
                             <img src="<?php echo get_template_directory_uri()?>/images/logo.svg" alt="">
                             <img src="<?php echo get_template_directory_uri()?>/images/title.svg" alt="">
+                        </a>
                         </div>
-                    </a>
-
-                    <!-- <button id="navBtn">
-                        <span class="navbar-toggler-icon"></span>
-                    </button> -->
+                    
                     <?php wp_nav_menu(); ?>
-                    <a id="EN" href="https://science.nycu.edu.tw/en/en-homepage/">
-                        EN
-                    </a>
+                    <div class="mobile_wrapper">
+                        <a id="EN" href="https://science.nycu.edu.tw/en/en-homepage/">
+                            EN
+                        </a>
+                        <button id="navBtn">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
                     <div id="blocker"></div>
                 </nav>
             </header>

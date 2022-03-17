@@ -106,4 +106,25 @@
         }
 
     }
+
+    .owl-dots{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    button.owl-dot{
+        background-color: rgb(var(--hr-gray))!important;
+        width: 50px;
+        height: 3px;
+        display: inline-block;
+        border: none;
+        padding: 0!important;
+    }
+    button.active{
+        background-color: rgb(var(--vivid-blue))!important;
+        height: 16px;
+        border-radius: 10px;
+    }
 </style>

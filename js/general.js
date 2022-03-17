@@ -1,68 +1,76 @@
 // var $ = jQuery.noConflict(true);
 
-$(() => { //wait for DOM load
+$(() => {
+    //wait for DOM load
     const dropdowns = document.getElementsByClassName("sub-menu");
     const blocker = document.getElementById("blocker");
 
+
     let hidedropdowns = () => {
-        Array.from(dropdowns).forEach(el => {
+        Array.from(dropdowns).forEach((el) => {
             el.removeAttribute("style");
         });
         blocker.removeAttribute("style");
-    }
+        // $("#menu-main").removeAttr("style");
+    };
 
-    $(window).on("click", event => {
+    $(window).on("click", (event) => {
         if (event.type == "touchstart") {
-            $(this).off('click')
+            $(this).off("click");
         }
-        let target = event.target.parentNode;
-        if ($(window).width() > 800) {
-            hidedropdowns();
-        }
-        if (target.matches('.menu-item-has-children')) {
-            target.querySelector('ul.sub-menu').style.display = "flex";
-            $('#blocker').css('display','block');
+        let target = event.target;
+        let targetParent = target.parentNode;
+
+        if (targetParent.matches(".menu-item-has-children")) {
+            if ($(window).width() > 800) {
+                hidedropdowns();
+                targetParent.querySelector("ul.sub-menu").style.display = "flex";
+                $("#blocker").css("display", "block");
+            } else {
+                $(targetParent.querySelector('ul.sub-menu')).slideToggle();
+            }
+        } else if (targetParent.id == "navBtn") {
+            $("#menu-main").slideToggle();
         } else {
             hidedropdowns();
         }
     });
 
-    // $("#navBtn").click(() => {
-    //     $("#navbar ul").slideToggle();
-    // });
+    window.onresize = () => {
+        if ($(window).width() > 800) {
+            $("#navbar ul").css("display", "");
+        }
+    };
 
-    // window.onresize = () => {
-    //     if (jq3(window).width() > 800) {
-    //         jq3("#navbar ul").css("display", "");
-    //     }
-    // }
-
-    $('#topBtn').click(() => {
+    $("#topBtn").click(() => {
         $("html, body").animate({
-            scrollTop: 0
-        }, 500);
+                scrollTop: 0,
+            },
+            500
+        );
     });
 
-    let currentScrollPos = window.pageYOffset
-    let prevScrollpos = currentScrollPos
+    // let currentScrollPos = window.pageYOffset;
+    // let prevScrollpos = currentScrollPos;
+
     $(window).scroll(() => {
         if ($(this).scrollTop() > 400) {
-            $('#topBtn').fadeIn();
+            $("#topBtn").fadeIn();
         } else {
-            $('#topBtn').fadeOut();
+            $("#topBtn").fadeOut();
         }
 
         //common variable
-        currentScrollPos = window.pageYOffset
+        //currentScrollPos = window.pageYOffset;
         //scroll down hide navbar
         // if (prevScrollpos > currentScrollPos) {
         //     $('#navbar').css('visibility', 'visible');
         // } else {
         //     $('#navbar').css('visibility', 'hidden');
         // }
-        prevScrollpos = currentScrollPos
+        //prevScrollpos = currentScrollPos;
     });
 
-    $('#single_cat_title>ul>li>a').remove();
-
+    //remove single_cat_title sidebar default title
+    $("#single_cat_title>ul>li>a").remove();
 });
