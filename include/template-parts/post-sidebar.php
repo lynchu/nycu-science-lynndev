@@ -59,14 +59,20 @@
 				<div class="post-sidebar-title-cht">分享</div>
 			</h2>
 			<div class='post-sidebar-icons'>
-				<img class='post-sidebar-share-icon' 
-					src="<?php echo get_template_directory_uri() . '/images/fb-icon.png';?>"
-					alt="share post by facebook">
+				<a href="<?php echo "https://www.facebook.com/sharer/sharer.php?u=".get_permalink(); ?>" target="_blank">
+					<img class='post-sidebar-share-icon' 
+						src="<?php echo get_template_directory_uri() . '/images/fb-icon.png';?>"
+						alt="share post by facebook">
+				</a>
 				<!--<img class='post-sidebar-share-icon' 
 					src="<//?php echo get_template_directory_uri() . '/images/mail-icon.png';?>"
 					alt="share post by email">-->
-					src="<?php echo get_template_directory_uri() . '/images/link-icon.png';?>"
-					alt="copy post link">
+				<a id="copy-link-btn" data-clipboard-text="<?php echo get_permalink(); ?>">
+					<img class='post-sidebar-share-icon' 
+						src="<?php echo get_template_directory_uri() . '/images/link-icon.png';?>"
+						alt="copy post link">
+					<span class="tooltip"><span class="tooltiptext"><?php _e("已複製", "nycu-science"); ?></span></span>
+				</a>
 			</div>
 			<div class="horizontal-divider"></div>
 		</div>

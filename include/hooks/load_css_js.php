@@ -1,7 +1,8 @@
 <?php
 
 function post_template_part_css() {
-    wp_enqueue_style('post-sidebar', get_template_directory_uri().'/css/post-sidebar.css', 'single', '2021012100', 'screen' );
+    wp_enqueue_style('post-sidebar', get_template_directory_uri().'/css/post-sidebar.css', 'single', '20210317', 'screen' );
+    wp_enqueue_script('post-sidebar-js', get_template_directory_uri().'/js/post-sidebar.js', 'jQuery', '20220317', null);
     wp_enqueue_style('post-nav-list', get_template_directory_uri().'/css/post-nav-list.css', 'single', '2021021800', 'screen' );
 }
 add_action('get_template_part_include/template-parts/post', 'post_template_part_css');
@@ -44,7 +45,7 @@ function theme_css_js() {
     }
     /* dean */
     if (is_post_type_archive('dean')) {
-        wp_enqueue_style('dean', get_template_directory_uri().'/css/archive-dean.css', 'general-css', '2021031000', 'screen'); 
+        wp_enqueue_style('dean', get_template_directory_uri().'/css/archive-dean.css', 'general-css', '20210317', 'screen'); 
     }
 }
 add_action('wp_enqueue_scripts', 'theme_css_js');

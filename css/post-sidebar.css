@@ -63,6 +63,11 @@
     cursor: pointer;
     width: 40px;
     height: 40px;
+    border-radius: 20px;
+}
+
+.post-sidebar-share-icon:hover {
+    background-color: white;
 }
 
 #post-sidebar-tags {
@@ -85,6 +90,10 @@
     padding: 6px 25px;
     width: min(32vw, 18.3rem);
     margin-bottom: 8px;
+}
+
+.post-sidebar-document-link:hover {
+    background-color: white;
 }
 
 .post-sidebar-document-link > a {
@@ -114,6 +123,45 @@
     margin-bottom: 50px;
     border: solid 1px rgb(var(--hr-gray));
     background-color: rgb(var(--hr-gray));
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: #555;
+    color: #fff;
+    font-size: 1.125rem;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -66px;
+    opacity: 0;
+    transition: opacity 0.2s 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+a:active > .post-sidebar-share-icon:hover + .tooltip .tooltiptext {
+    opacity: 1;
+    transition: opacity 0.2s;
 }
 
 @media (max-width: 767px) {
