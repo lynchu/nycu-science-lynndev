@@ -62,10 +62,9 @@
 				<img class='post-sidebar-share-icon' 
 					src="<?php echo get_template_directory_uri() . '/images/fb-icon.png';?>"
 					alt="share post by facebook">
-				<img class='post-sidebar-share-icon' 
-					src="<?php echo get_template_directory_uri() . '/images/mail-icon.png';?>"
-					alt="share post by email">
-				<img class='post-sidebar-share-icon' 
+				<!--<img class='post-sidebar-share-icon' 
+					src="<//?php echo get_template_directory_uri() . '/images/mail-icon.png';?>"
+					alt="share post by email">-->
 					src="<?php echo get_template_directory_uri() . '/images/link-icon.png';?>"
 					alt="copy post link">
 			</div>

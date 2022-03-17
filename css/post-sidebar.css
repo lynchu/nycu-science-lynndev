@@ -56,7 +56,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     object-fit: contain;
-    max-width: 160px;
+    max-width: 100px;
 }
 
 .post-sidebar-share-icon {
