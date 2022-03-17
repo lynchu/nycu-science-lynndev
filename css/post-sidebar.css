@@ -80,7 +80,7 @@
     display: flex;
     align-items: center;
     border-radius: 20px;
-    border: solid 1px rgb(var(--cornflower));
+    border: solid 1px rgb(var(--dark));
     height: 40px;
     padding: 6px 25px;
     width: min(32vw, 18.3rem);
@@ -95,7 +95,7 @@
     font-style: normal;
     letter-spacing: 2.7px;
     text-align: left;
-    color: rgb(var(--cornflower));
+    color: rgb(var(--dark));
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
