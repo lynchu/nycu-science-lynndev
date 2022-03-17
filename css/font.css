@@ -41,13 +41,14 @@ h6 {
     margin: 0;
 }
 
-/*for screen size like iPhone5*/
-@media only screen and (max-width: 1440px) and (min-width: 769px) {
+/* desktops */
+@media only screen and (max-width: 1439px) and (min-width: 992px) {
     html {
         font-size: 14px;
     }
 }
-@media only screen and (max-width: 768px) {
+/* tablets & phones */
+@media only screen and (max-width: 991px) {
     html {
         font-size: 12px;
     }
