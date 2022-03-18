@@ -153,7 +153,7 @@ img {
 
 #navbar li ul {
     position: fixed;
-    top: calc(121/1920*100vw);
+    top: 5rem;
     left: 0;
     display: flex;
     flex-wrap: wrap;
@@ -162,7 +162,7 @@ img {
     padding: 3% 20%;
     border-radius: 20px;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.16);
-    background-color: rgba(var(--beige), .85);
+    background-color: rgba(var(--beige), .98);
 }
 
 #navbar li ul li {
@@ -217,16 +217,20 @@ img {
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
 
-    #navbar {
+    /* #navbar {
         backdrop-filter: blur(39px);
         -webkit-backdrop-filter: blur(39px);
+    } */
+
+    #navbar {
+        background-color: rgba(var(--beige), 1);
     }
 }
 
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
 
     #navbar {
-        background-color: rgba(var(--beige), .9);
+        background-color: rgba(var(--beige), 1);
     }
 
 }
@@ -341,11 +345,11 @@ img {
     text-align: center;
     position: fixed;
     z-index: 999;
-    top: 0px;
+    top: 5rem;
     left: 0px;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.10);
     display: none;
 }
 

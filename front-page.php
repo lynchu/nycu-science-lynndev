@@ -194,12 +194,12 @@
         font-size: .8rem;
     }
 
-    .nav_card_item a {
+    .navcard_left .nav_card_item a {
         background: linear-gradient(135deg, rgb(var(--cornflower)) 50%, rgb(var(--beige)) 50%);
         position: relative;
     }
 
-    .nav_card_item a:after {
+    .navcard_left .nav_card_item a:after {
         content: "";
         position: absolute;
         top: 0;
@@ -210,16 +210,31 @@
         z-index: -1;
     }
 
-    .nav_card_item a,
-    .nav_card_item a:after {
+    .navcard_left .nav_card_item a,
+    .navcard_left .nav_card_item a:after {
         background-size: 300%;
         background-position: 100%;
         transition: 1s, font-size 0.2s;
     }
 
-    .nav_card_item a:hover,
-    .nav_card_item a:hover:after {
+    .navcard_left .nav_card_item a:hover,
+    .navcard_left .nav_card_item a:hover:after,
+    .navcard_left .nav_card_item a:hover .date {
         color: rgb(var(--white));
+        background-position: 0;
+    }
+
+    .navcard_right .nav_card_item a,
+    .navcard_right .nav_card_item a:after {
+        background-size: 300%;
+        background-position: 100%;
+        transition: 1s, font-size 0.2s;
+    }
+
+    .navcard_right .nav_card_item a:hover,
+    .navcard_right .nav_card_item a:hover:after,
+    .navcard_right .nav_card_item a:hover .date {
+        color: rgb(var(--vivid-blue));
         background-position: 0;
     }
 
