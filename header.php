@@ -23,7 +23,7 @@
                     
                     <?php wp_nav_menu(); ?>
                     <div class="mobile_wrapper">
-                        <a id="EN" href="https://science.nycu.edu.tw/en/en-homepage/">
+                        <a id="EN" href="<?php echo site_url();?>/en">
                             EN
                         </a>
                         <button id="navBtn">
