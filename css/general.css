@@ -375,13 +375,13 @@ img {
         margin-left: unset;
         position: absolute;
         top: 5rem;
+        background: rgb(var(--yellow-gray));
     }
 
     #navbar ul {
         flex-direction: column;
         align-items: flex-start;
         flex-basis: 100%;
-        background: rgb(var(--yellow-gray));
         display: none;
         margin: 0;
     }
@@ -412,7 +412,7 @@ img {
     .contact table td {
         display: block;
         /* 一定要下！ */
-        padding: 0;
+        /* padding: 0; */
         margin-bottom: 1rem;
     }
 
@@ -423,6 +423,10 @@ img {
     .friend_link {
         flex-direction: row;
         width: 100%;
+    }
+
+    #up-left, #up-right, #down-left,#down-right {
+        padding-left: 2.5rem;
     }
 }
 
