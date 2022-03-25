@@ -1,5 +1,6 @@
 main {
-    padding: 100px calc(180/1920*100vw) 200px;
+    padding: 100px calc(180/1920*100vw) 0px;
+    margin-bottom: 200px;
     font-weight: normal; 
     font-stretch: normal;
     font-style: normal;
