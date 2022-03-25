@@ -135,3 +135,12 @@
 #arrow-next {
     justify-content: flex-end;
 }
+
+@media (max-width: 767px) {
+    .arrow {
+        display: none;
+    }
+    .post-list-item {
+        flex-basis: 100%;
+    }
+}
