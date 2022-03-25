@@ -193,5 +193,21 @@
             padding-top: 5rem;
         }
     }
+    @media only screen and (max-width: 768px) {
+        .left_sb_a{
+            display: none!important;
+        }
+        main {
+            flex-direction: column;
+        }
+        section {
+            padding-top: 10rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .left_block, .right_block{
+            padding: 0 10%;
+        }
+    }
 </style>
 <?php get_footer(); ?>
