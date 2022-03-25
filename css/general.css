@@ -163,12 +163,14 @@ img {
     border-radius: 20px;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.16);
     background-color: rgba(var(--beige), .98);
+    min-height: 15rem;
 }
 
 #navbar li ul li {
     position: unset;
     width: calc(100%/3);
-    height: calc(72/1920*100vw);
+    /* height: calc(72/1920*100vw); */
+    height: 4rem;
     margin-bottom: 1.5rem;
 }
 
