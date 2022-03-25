@@ -8,7 +8,7 @@ $(() => {
 
     let hidedropdowns = () => {
         Array.from(dropdowns).forEach((el) => {
-            el.removeAttribute("style");
+            el.style.display = "";
         });
         blocker.removeAttribute("style");
         // $("#menu-main").removeAttr("style");
@@ -73,4 +73,12 @@ $(() => {
 
     //remove single_cat_title sidebar default title
     $("#single_cat_title>ul>li>a").remove();
+
+    //
+    Array.from(dropdowns).forEach((el) => {
+        if (el.getElementsByTagName("li").length < 3){
+            console.log(el);
+            el.style.justifyContent = "center";
+        }
+    });
 });
