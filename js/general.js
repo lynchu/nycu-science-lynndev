@@ -4,6 +4,7 @@ $(() => {
     //wait for DOM load
     const dropdowns = document.getElementsByClassName("sub-menu");
     const blocker = document.getElementById("blocker");
+    const dropdown_btn = document.getElementsByClassName("menu-item-has-children");
 
 
     let hidedropdowns = () => {
@@ -77,8 +78,10 @@ $(() => {
     //
     Array.from(dropdowns).forEach((el) => {
         if (el.getElementsByTagName("li").length < 3){
-            console.log(el);
             el.style.justifyContent = "center";
         }
+    });
+    Array.from(dropdown_btn).forEach((el) => {
+        el.setAttribute("onclick", "void(0)");
     });
 });
