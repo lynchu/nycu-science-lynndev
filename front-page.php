@@ -81,7 +81,7 @@
 
     .navcard_right .nav_card_item {
         width: 100%;
-        height: 13.5rem;
+        /* height: 13.5rem; */
         /* margin-bottom: 1.5rem; */
         cursor: pointer;
         /* border-bottom: 1px groove; */
@@ -89,7 +89,7 @@
 
     .navcard_left .nav_card_item {
         width: 100%;
-        height: 12rem;
+        /* height: 12rem; */
         border-radius: 10px;
         box-shadow: 1px 3px 20px 0 rgba(0, 0, 0, 0.16);
         /* background-color: #eeedea; */
@@ -192,6 +192,9 @@
         height: inherit;
         color: rgb(var(--white));
         font-size: .8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .navcard_left .nav_card_item a {
@@ -238,6 +241,22 @@
         background-position: 0;
     }
 
+    .featured_thumb {
+        width: 100%;
+        /* height: 50vh; */
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+    }
+
+    .featured_thumb img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
     @media screen and (max-width: 800px) {
         .post_title{
             font-size: 1.5rem;
@@ -257,17 +276,23 @@
         .navcard_r{
             width: 100%;
         }
+        .navcard_right a {
+            padding: 2rem 0rem;
+        }
+        /* .featured_thumb {
+            width: inherit;
+            height: 40vh;
+        }
+        .featured_thumb img {
+            height: 100%;
+            width: auto;
+            border-radius: 20px;
+        }
+        .navcard_right {
+            width: inherit;
+        } */
     }
-    .featured_thumb {
-        width: 100%;
-        position: relative;
-        
-    }
-
-    .featured_thumb img {
-        width: 100%;
-        border-radius: 20px;
-    }
+    
 </style>
 
 <?php get_footer(); ?>
