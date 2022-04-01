@@ -94,7 +94,7 @@
 .info-card > .text-box > .name { 
     display: flex;
     flex-wrap: wrap;
-    line-height: 1.13;
+    line-height: 1.25;
 }
 
 .info-card > .text-box > .name > div {
