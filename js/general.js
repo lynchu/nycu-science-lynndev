@@ -4,11 +4,12 @@ $(() => {
     //wait for DOM load
     const dropdowns = document.getElementsByClassName("sub-menu");
     const blocker = document.getElementById("blocker");
+    const dropdown_btn = document.getElementsByClassName("menu-item-has-children");
 
 
     let hidedropdowns = () => {
         Array.from(dropdowns).forEach((el) => {
-            el.removeAttribute("style");
+            el.style.display = "";
         });
         blocker.removeAttribute("style");
         // $("#menu-main").removeAttr("style");
@@ -73,4 +74,14 @@ $(() => {
 
     //remove single_cat_title sidebar default title
     $("#single_cat_title>ul>li>a").remove();
+
+    //
+    Array.from(dropdowns).forEach((el) => {
+        if (el.getElementsByTagName("li").length < 3){
+            el.style.justifyContent = "center";
+        }
+    });
+    Array.from(dropdown_btn).forEach((el) => {
+        el.setAttribute("onclick", "void(0)");
+    });
 });

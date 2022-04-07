@@ -30,7 +30,7 @@
     <h2>新世代功能性物質研究中心 (校級)<br>Center for Emergent Functional Matter Science, CEFMS</h2>
     <p>
     <br>
-    「新世代功能性物質研究中心」係由教育部頂尖大學計畫中所設立之「前瞻跨領域基礎科學中心」進一步整合發展而成。過去十年來，「前瞻跨領域基礎科學中心」在延攬人才方面、研究成果、國際合作及產學合作上，都有長足進展。在深耕計畫中，「新世代功能性物質研究中心」進一步整合原有團隊，並加入多位傑出新血，同時持續延攬國際人才，聚焦於功能性物質及柔性電子之研究及應用，從事新世代「綠能材料及柔性元件」，「智慧生醫檢測及柔性電子技術」，及「創新智慧元件」三個面向的開發研究；重點發展切合國家發展需要及世界研究潮流，之題材。
+    「新世代功能性物質研究中心」係由教育部頂尖大學計畫中所設立之「前瞻跨領域基礎科學中心」進一步整合發展而成。過去十年來，「前瞻跨領域基礎科學中心」在延攬人才方面、研究成果、國際合作及產學合作上，都有長足進展。在深耕計畫中，「新世代功能性物質研究中心」進一步整合原有團隊，並加入多位傑出新血，同時持續延攬國際人才，聚焦於功能性物質及柔性電子之研究及應用，從事新世代「綠能材料及柔性元件」，「智慧生醫檢測及柔性電子技術」，及「創新智慧元件」三個面向的開發研究；重點發展切合國家發展需要及世界研究潮流之題材。
     </p>
     </div>
 </a>
@@ -89,23 +89,28 @@
     }
 
     .block_left {
-        display: contents;
+        flex: 3;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .block_right {
-        flex-grow: 1;
+        flex: 7;
         padding: 2rem;
         background-color: rgb(var(--dark));
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
     }
 
     @media only screen and (max-width: 1440px) and (min-width: 769px) {
         main section p {
-        font-size: 1rem;
+            font-size: 1rem;
         }
     }
-    @media only screen and (max-width: 768px){
-        main section a{
+
+    @media only screen and (max-width: 768px) {
+        main section a {
             flex-direction: column;
             height: unset;
         }
@@ -114,8 +119,12 @@
             flex-direction: column;
         }
 
-        .block_right{
+        .block_right {
             overflow-y: unset;
+        }
+
+        .block_left{
+            display:none;
         }
     }
 

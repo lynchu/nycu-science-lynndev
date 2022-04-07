@@ -81,7 +81,7 @@
 
     .navcard_right .nav_card_item {
         width: 100%;
-        height: 13.5rem;
+        /* height: 13.5rem; */
         /* margin-bottom: 1.5rem; */
         cursor: pointer;
         /* border-bottom: 1px groove; */
@@ -89,7 +89,7 @@
 
     .navcard_left .nav_card_item {
         width: 100%;
-        height: 12rem;
+        /* height: 12rem; */
         border-radius: 10px;
         box-shadow: 1px 3px 20px 0 rgba(0, 0, 0, 0.16);
         /* background-color: #eeedea; */
@@ -192,14 +192,17 @@
         height: inherit;
         color: rgb(var(--white));
         font-size: .8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .nav_card_item a {
+    .navcard_left .nav_card_item a {
         background: linear-gradient(135deg, rgb(var(--cornflower)) 50%, rgb(var(--beige)) 50%);
         position: relative;
     }
 
-    .nav_card_item a:after {
+    .navcard_left .nav_card_item a:after {
         content: "";
         position: absolute;
         top: 0;
@@ -210,17 +213,48 @@
         z-index: -1;
     }
 
-    .nav_card_item a,
-    .nav_card_item a:after {
+    .navcard_left .nav_card_item a,
+    .navcard_left .nav_card_item a:after {
         background-size: 300%;
         background-position: 100%;
         transition: 1s, font-size 0.2s;
     }
 
-    .nav_card_item a:hover,
-    .nav_card_item a:hover:after {
+    .navcard_left .nav_card_item a:hover,
+    .navcard_left .nav_card_item a:hover:after,
+    .navcard_left .nav_card_item a:hover .date {
         color: rgb(var(--white));
         background-position: 0;
+    }
+
+    .navcard_right .nav_card_item a,
+    .navcard_right .nav_card_item a:after {
+        background-size: 300%;
+        background-position: 100%;
+        transition: 1s, font-size 0.2s;
+    }
+
+    .navcard_right .nav_card_item a:hover,
+    .navcard_right .nav_card_item a:hover:after,
+    .navcard_right .nav_card_item a:hover .date {
+        color: rgb(var(--vivid-blue));
+        background-position: 0;
+    }
+
+    .featured_thumb {
+        width: 100%;
+        /* height: 50vh; */
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+    }
+
+    .featured_thumb img {
+        width: 100%;
+        border-radius: 20px;
     }
 
     @media screen and (max-width: 800px) {
@@ -242,17 +276,23 @@
         .navcard_r{
             width: 100%;
         }
+        .navcard_right a {
+            padding: 2rem 0rem;
+        }
+        /* .featured_thumb {
+            width: inherit;
+            height: 40vh;
+        }
+        .featured_thumb img {
+            height: 100%;
+            width: auto;
+            border-radius: 20px;
+        }
+        .navcard_right {
+            width: inherit;
+        } */
     }
-    .featured_thumb {
-        width: 100%;
-        position: relative;
-        
-    }
-
-    .featured_thumb img {
-        width: 100%;
-        border-radius: 20px;
-    }
+    
 </style>
 
 <?php get_footer(); ?>
