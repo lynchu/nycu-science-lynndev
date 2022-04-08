@@ -47,5 +47,11 @@ function theme_css_js() {
     if (is_post_type_archive('dean')) {
         wp_enqueue_style('dean', get_template_directory_uri().'/css/archive-dean.css', 'general-css', '20210317', 'screen'); 
     }
+    /* regulations */
+    if (is_page('regulations')) {
+        wp_enqueue_style('regulations-css', get_template_directory_uri().'/css/regulations.css', 'singular', '2022040800', 'screen');
+        wp_enqueue_script('regulations-js', get_template_directory_uri().'/js/regulations.js', 'general-js', false, null);
+
+    }
 }
 add_action('wp_enqueue_scripts', 'theme_css_js');
