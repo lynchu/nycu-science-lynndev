@@ -87,8 +87,7 @@
     flex-basis: 40.5%;
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;  
-    justify-content: space-between;
+    align-content: flex-start;
 }
 
 .info-card > .text-box > .name { 
@@ -139,9 +138,10 @@
     text-align: left;
     color: var(--dark);
 
-    flex-basis: 28%;
+    flex-basis: 100%;
     white-space: nowrap;
     display: flex;
+    margin-bottom: 5px;
 }
 
 .info-card > .text-box > .email {
