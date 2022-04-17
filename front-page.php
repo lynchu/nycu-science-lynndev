@@ -26,6 +26,7 @@
 
     .navcard_container {
         padding: 5vh 10%;
+        padding-bottom: 0;
         display: flex;
         justify-content: space-between;
     }
