@@ -95,6 +95,7 @@ main {
     align-items: center;
     height: 5rem;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.16);
+    background-color: rgba(var(--beige), .98);
     z-index: 990;
 }
 
@@ -219,27 +220,6 @@ main {
     background-size: 100% 100%;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-
-    /* #navbar {
-        backdrop-filter: blur(39px);
-        -webkit-backdrop-filter: blur(39px);
-    } */
-
-    #navbar {
-        background-color: rgba(var(--beige), 1);
-    }
-}
-
-@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-
-    #navbar {
-        background-color: rgba(var(--beige), 1);
-    }
-
-}
-
 
 #footer {
     width: 100%;
