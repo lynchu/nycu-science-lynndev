@@ -51,7 +51,10 @@ function theme_css_js() {
     if (is_page('regulations')) {
         wp_enqueue_style('regulations-css', get_template_directory_uri().'/css/regulations.css', 'singular', '2022040800', 'screen');
         wp_enqueue_script('regulations-js', get_template_directory_uri().'/js/regulations.js', 'general-js', false, null);
-
+    }
+    if (is_page('research_areas')) {
+        wp_enqueue_style('research_areas-css', get_template_directory_uri().'/css/research_areas.css', 'singular', '2022041500', 'screen');
+        wp_enqueue_script('research_areas-js', get_template_directory_uri().'/js/research_areas.js', 'general-js', false, null);
     }
 }
 add_action('wp_enqueue_scripts', 'theme_css_js');
