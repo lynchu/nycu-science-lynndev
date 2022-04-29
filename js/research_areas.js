@@ -100,17 +100,17 @@ $(() => {
     h2.forEach(element => {
         if(element.textContent == '物理領域'){
             let img = new Image();
-            img.src = "../wp-content/themes/nycu-science/images/research_areas/field_phys.webp";
+            img.src = templateUrl+"/images/research_areas/field_phys.webp";
             element.outerHTML = "<div id='field_phys' class='field_wrapper'>"+element.outerHTML+img.outerHTML+"</div>";
         }
         if(element.textContent == '數統領域'){
             let img = new Image();
-            img.src = "../wp-content/themes/nycu-science/images/research_areas/field_math.webp";
+            img.src = templateUrl+"/images/research_areas/field_math.webp";
             element.outerHTML = "<div id='field_math' class='field_wrapper'>"+element.outerHTML+img.outerHTML+"</div>";
         }
         if(element.textContent == '化學領域'){
             let img = new Image();
-            img.src = "../wp-content/themes/nycu-science/images/research_areas/field_chem.webp";
+            img.src = templateUrl+"/images/research_areas/field_chem.webp";
             element.outerHTML = "<div id='field_chem' class='field_wrapper'>"+element.outerHTML+img.outerHTML+"</div>";
         }
     });

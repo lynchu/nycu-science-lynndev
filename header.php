@@ -5,6 +5,9 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title><?php wp_title(' - ', true, 'right'); bloginfo('name');?></title>
+    <script type="text/javascript">
+        const templateUrl = '<?php echo get_bloginfo("template_url"); ?>';
+    </script>
     <?php wp_head(); ?>
 </head>
 
