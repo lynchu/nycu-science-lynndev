@@ -12,6 +12,10 @@
     font-size: 1.375rem;
 }
 
+.is-style-outline .wp-block-button__link {
+    padding: .2rem 1.2rem;
+}
+
 .wp-block-button:hover .wp-block-button__link {
     background-color: white;
 }
@@ -58,4 +62,21 @@ p a:hover{
     .wp-block-columns :nth-child(2) {
         margin-top: 1rem;
     }
+}
+
+main h6 {
+    display: block;
+    width: 100%;
+    font-size: 1.625rem;
+    position: relative;
+}
+main h6:after {
+    content: '';
+    display: block;
+    width: 75%;
+    border: .5px solid rgb(var(--hr-gray));
+    margin-left: auto;
+    position: absolute;
+    top: 1.3rem;
+    right: 0;
 }
