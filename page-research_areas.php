@@ -86,7 +86,7 @@ while ( have_posts() ) : the_post();
         font-weight: 500;
     }
     .right_block{
-        flex: 3;
+        flex: 4;
         padding-left: 1rem;
     }
     section h2::after{
