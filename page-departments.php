@@ -185,14 +185,14 @@
         text-align: justify;
     }
     /*for screen size like iPhone5*/
-    @media only screen and (max-width: 1440px) and (min-width: 769px) {
+    /* @media only screen and (max-width: 1440px) and (min-width: 769px) {
         section{
             padding-top: 5rem;
         }
         section:first-of-type{
             padding-top: 5rem;
         }
-    }
+    } */
     @media only screen and (max-width: 768px) {
         .left_sb_a{
             display: none!important;
