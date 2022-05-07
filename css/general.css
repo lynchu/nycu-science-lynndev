@@ -475,6 +475,7 @@ hr {
     background: no-repeat center center;
     background-size: 100% 100%;
     background-image: url("../images/search.svg");
+    cursor: pointer;
 }
 
 #donateBtn{
@@ -484,4 +485,5 @@ hr {
     border-radius: 5px;
     color: rgb(var(--white));
     background-color: rgb(var(--cornflower));
+    cursor: pointer;
 }
