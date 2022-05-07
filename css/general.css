@@ -121,8 +121,9 @@ main {
 }
 
 #navbar .menu-main-container {
-    display: inherit;
-    margin-left: calc(174/1920*100vw);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #navbar a {
@@ -337,9 +338,12 @@ main {
 
 #navbar .mobile_wrapper {
     display: flex;
-    flex: 1;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
+}
+
+#navbar .mobile_wrapper > * {
+    margin-right: 1.5rem;
 }
 
 @media screen and (max-width: 800px) {
