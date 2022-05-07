@@ -26,11 +26,17 @@
                     
                     <?php wp_nav_menu(); ?>
                     <div class="mobile_wrapper">
+                         <button id="searchBtn">
+                            <?php get_search_form(); ?>
+                        </button>
                         <a id="EN" href="<?php echo site_url();?>/en">
                             EN
                         </a>
                         <button id="navBtn">
                             <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <button id="donateBtn">
+                            募款活動
                         </button>
                     </div>
                     <div id="blocker"></div>

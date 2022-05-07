@@ -4,14 +4,18 @@ $(() => {
     //wait for DOM load
     const dropdowns = document.getElementsByClassName("sub-menu");
     const blocker = document.getElementById("blocker");
+    const search_btn = document.getElementById("searchBtn");
+    const searchform = document.getElementById("searchform");
     const dropdown_btn = document.getElementsByClassName("menu-item-has-children");
 
+    $("#s").val("");
 
     let hidedropdowns = () => {
         Array.from(dropdowns).forEach((el) => {
             el.style.display = "";
         });
         blocker.removeAttribute("style");
+        searchform.removeAttribute("style");
         // $("#menu-main").removeAttr("style");
     };
 
@@ -31,7 +35,12 @@ $(() => {
                 $(targetParent.querySelector('ul.sub-menu')).slideToggle();
             }
         } else if (targetParent.id == "navBtn") {
+            hidedropdowns();
             $("#menu-main").slideToggle();
+        } else if (targetParent.id == search_btn.id || search_btn.contains(target)) {
+            hidedropdowns();
+            $("#blocker").css("display", "block");
+            $("#searchform").css("display", "flex");
         } else {
             hidedropdowns();
         }
@@ -82,6 +91,6 @@ $(() => {
         }
     });
     Array.from(dropdown_btn).forEach((el) => {
-        el.setAttribute("onclick", "void(0)");
+        el.setAttribute("onclick", "void(0);");
     });
 });

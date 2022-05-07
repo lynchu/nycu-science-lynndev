@@ -19,7 +19,7 @@ require get_template_directory() . '/include/ACF/document.php';
 require get_template_directory() . '/include/ACF/staff-info.php';
 require get_template_directory() . '/include/ACF/dean-info.php';
 
-//require get_template_directory() . '/include/widgets/pagenavi.php';
+require get_template_directory() . '/include/widgets/pagenavi.php';
 
 /**
  * Checks if the post is in one of the categories or any child category. 
