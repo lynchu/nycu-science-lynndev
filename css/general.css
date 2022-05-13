@@ -464,6 +464,7 @@ hr {
 #searchform input {
     font-size: 2rem;
     line-height: unset;
+    margin: .5rem;
 }
 
 #searchBtn {
