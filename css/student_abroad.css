@@ -1,0 +1,145 @@
+#post-content-area {
+    margin-bottom: unset;
+}
+
+#post-content {
+    flex-grow: unset;
+    flex-basis: unset;
+    width: 90%;
+}
+
+strong {
+    font-weight: 500;
+}
+
+main tbody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main tr {
+    /* flex: 50%; */
+    width: 45%;
+}
+
+main td:nth-child(2) {
+    display: flex;
+    font-size: 1.125rem;
+}
+
+main td:nth-child(2):before {
+    content: "";
+    background-image: url(../images/field_icon.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 2rem;
+    width: 17px;
+    height: 25px;
+}
+
+main td:nth-child(3) {
+    display: flex;
+    font-size: 1.125rem;
+}
+
+main td:nth-child(3):before {
+    content: "";
+    background-image: url(../images/member_icon.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 2rem;
+    width: 17px;
+    height: 25px;
+}
+
+main td:nth-child(3)>div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main td:nth-child(3)>div>div {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+main td:nth-child(3) div span {
+    flex: 1;
+    font-size: 1.125rem;
+    /* text-align: center; */
+}
+
+main td:nth-child(3) div p {
+    flex: 4;
+    padding-left: 1rem;
+    border-left: solid 1px rgb(var(--hr-gray));
+    font-size: 1.125rem;
+}
+
+main td:nth-child(3) div p span {
+    display: inline-block;
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+main table td {
+    display: block;
+    border: unset;
+}
+
+content p {
+    margin-bottom: unset;
+}
+
+.field_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+}
+
+.field_wrapper:before {
+    content: '';
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) 54%, rgb(var(--dark)));
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    z-index: 2;
+}
+.field_wrapper:first-of-type {
+    padding-top: 5rem;
+}
+.field_wrapper:first-of-type:before {
+    margin-top: 5rem;
+}
+
+.field_wrapper img {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+#post-content .field_wrapper h2 {
+    margin: 0;
+    margin-left: 7.3%;
+    font-size: 2.5rem;
+    position: absolute;
+    color: white;
+    z-index: 3;
+}
+
+/* desktops */
+@media only screen and (max-width: 1440px) and (min-width: 992px) {
+    /* mac螢幕 p flex 3 */
+    main td:nth-child(3) div p {
+        flex: 3;
+    }
+}

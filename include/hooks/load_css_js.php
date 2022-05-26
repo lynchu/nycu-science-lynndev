@@ -56,5 +56,9 @@ function theme_css_js() {
         wp_enqueue_style('research_areas-css', get_template_directory_uri().'/css/research_areas.css', 'singular', '2022041500', 'screen');
         wp_enqueue_script('research_areas-js', get_template_directory_uri().'/js/research_areas.js', 'general-js', false, null);
     }
+    if (is_page('student_abroad')) {
+        wp_enqueue_style('student_abroad-css', get_template_directory_uri().'/css/student_abroad.css', 'singular', '2022041500', 'screen');
+        wp_enqueue_script('student_abroad-js', get_template_directory_uri().'/js/student_abroad.js', 'general-js', false, null);
+    }
 }
 add_action('wp_enqueue_scripts', 'theme_css_js');
