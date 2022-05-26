@@ -36,7 +36,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <button id="donateBtn">
-                            募款活動
+                            募款專區
                         </button>
                     </div>
                     <div id="blocker"></div>
