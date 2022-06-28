@@ -8,6 +8,7 @@
     <script type="text/javascript">
         const templateUrl = '<?php echo get_bloginfo("template_url"); ?>';
     </script>
+    <link rel='stylesheet' id='notosanstc'  href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap' media="print" onload="this.media='all'" />
     <?php wp_head(); ?>
 </head>
 
