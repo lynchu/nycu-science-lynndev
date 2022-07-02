@@ -103,8 +103,8 @@ content p {
 
 .field_wrapper:before {
     content: '';
-    position:absolute;
-    top:0;
+    position: absolute;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -114,9 +114,11 @@ content p {
     border-radius: 20px;
     z-index: 2;
 }
+
 .field_wrapper:first-of-type {
     padding-top: 5rem;
 }
+
 .field_wrapper:first-of-type:before {
     margin-top: 5rem;
 }
@@ -128,8 +130,7 @@ content p {
 }
 
 #post-content .field_wrapper h2 {
-    margin: 0;
-    margin-left: 7.3%;
+    margin: 0 4rem;
     font-size: 2.5rem;
     position: absolute;
     color: white;
@@ -138,8 +139,103 @@ content p {
 
 /* desktops */
 @media only screen and (max-width: 1440px) and (min-width: 992px) {
+
     /* mac螢幕 p flex 3 */
     main td:nth-child(3) div p {
         flex: 3;
     }
+}
+
+#post-content .field_wrapper h2 p {
+    font-size: 1rem;
+}
+
+.p_wrapper {
+    background-color: #052540;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.p_wrapper .field_wrapper {
+    padding-top: unset;
+    padding-bottom: unset;
+}
+
+.p_wrapper .field_wrapper:before {
+    margin-top: unset;
+    margin-bottom: unset;
+}
+
+.p_wrapper p {
+    color: rgb(var(--white));
+}
+
+.wp-block-column {
+    background-color: #052540;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.wp-block-column p {
+    color: rgb(var(--white))!important;
+}
+
+.small_title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+
+.small_title:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(var(--dark)));
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.small_title img {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+#post-content .small_title h3 {
+    margin: 0 1rem;
+    font-size: 1.625rem;
+    position: absolute;
+    color: white;
+    z-index: 3;
+}
+#post-content .small_title h3 p{
+    margin-bottom: unset;
+    text-align: left;
+}
+
+.inner_context{
+    display: flex;
+    flex-direction: row;
+}
+.inner_context div {
+    flex: 1;
+    padding: 0 1rem 1rem 1rem;
+}
+.inner_context div:first-of-type {
+    border-right: 1px solid white;
+    margin: 1rem 1rem;
+    padding: 0;
+    padding-right: 1rem;
+}
+
+#post-content .inner_context p{
+    font-size: 1rem;
+    margin-bottom: unset;
 }

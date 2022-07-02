@@ -1,148 +1,168 @@
+/*
 $(() => {
 
     $("thead").remove();
     // $("td:nth-child(3)").after('<div>'+$("td:nth-child(3)").text()+'</div>');
-    let td3 = document.querySelectorAll("td:nth-child(3)");
-    td3.forEach(ele1 => {
-        let text = ele1.innerHTML;
-        let chair = null;
-        let retire = null;
+    //let td3 = document.querySelectorAll("td:nth-child(3)");
+    // td3.forEach(ele1 => {
+    //     let text = ele1.innerHTML;
+    //     let chair = null;
+    //     let retire = null;
 
-        text = text.replaceAll("<br>", "").replaceAll("&nbsp;", "").replaceAll(" ", "");
+    //     text = text.replaceAll("<br>", "").replaceAll("&nbsp;", "").replaceAll(" ", "");
 
-        if (text.includes("講座教授")) {
-            const textchair = text.split("講座教授：");
-            text = textchair[0];
-            chair = textchair[1];
-            const chairs = chair.split("、");
-            chair = "";
-            let count_chair = 0;
-            chairs.forEach(ele2 => {
-                count_chair += 1;
-                if (count_chair % 3 == 0) {
-                    chair += "<span>" + ele2 + "</span><br>";
-                } else {
-                    chair += "<span>" + ele2 + "</span>";
-                }
-            });
-        }
-        if (text.includes("兼任退休教授")) {
-            const textretire = text.split("兼任退休教授：");
-            text = textretire[0];
-            retire = textretire[1];
-            const retires = retire.split("、");
-            retire = "";
-            let count_retire = 0;
-            retires.forEach(ele3 => {
-                count_retire += 1;
-                if (count_retire % 3 == 0) {
-                    retire += "<span>" + ele3 + "</span><br>";
-                } else {
-                    retire += "<span>" + ele3 + "</span>";
-                }
-            });
-        }
+    //     if (text.includes("講座教授")) {
+    //         const textchair = text.split("講座教授：");
+    //         text = textchair[0];
+    //         chair = textchair[1];
+    //         const chairs = chair.split("、");
+    //         chair = "";
+    //         let count_chair = 0;
+    //         chairs.forEach(ele2 => {
+    //             count_chair += 1;
+    //             if (count_chair % 3 == 0) {
+    //                 chair += "<span>" + ele2 + "</span><br>";
+    //             } else {
+    //                 chair += "<span>" + ele2 + "</span>";
+    //             }
+    //         });
+    //     }
+    //     if (text.includes("兼任退休教授")) {
+    //         const textretire = text.split("兼任退休教授：");
+    //         text = textretire[0];
+    //         retire = textretire[1];
+    //         const retires = retire.split("、");
+    //         retire = "";
+    //         let count_retire = 0;
+    //         retires.forEach(ele3 => {
+    //             count_retire += 1;
+    //             if (count_retire % 3 == 0) {
+    //                 retire += "<span>" + ele3 + "</span><br>";
+    //             } else {
+    //                 retire += "<span>" + ele3 + "</span>";
+    //             }
+    //         });
+    //     }
 
-        const texts = text.split("、");
-        text = "";
-        let count_text = 0;
-        texts.forEach(ele4 => {
-            count_text += 1;
-            if (count_text % 3 == 0) {
-                text += "<span>" + ele4 + "</span><br>";
-            } else {
-                text += "<span>" + ele4 + "</span>";
-            }
-        });
+    //     const texts = text.split("、");
+    //     text = "";
+    //     let count_text = 0;
+    //     texts.forEach(ele4 => {
+    //         count_text += 1;
+    //         if (count_text % 3 == 0) {
+    //             text += "<span>" + ele4 + "</span><br>";
+    //         } else {
+    //             text += "<span>" + ele4 + "</span>";
+    //         }
+    //     });
 
-        if (chair != null && retire != null) {
-            ele1.innerHTML =
-                '<div>'+
-                '<div><span>研究成員</span><p>' + text + '</p></div>' +
-                '<div><span>兼任退休教授</span><p>' + retire + '</p></div>' +
-                '<div><span>講座教授</span><p>' + chair + '</p></div>'+
-                '</div>';
-        } else if (chair != null) {
-            ele1.innerHTML =
-                '<div>'+
-                '<div><span>研究成員</span><p>' + text + '</p></div>' +
-                '<div><span>講座教授</span><p>' + chair + '</p></div>'+
-                '</div>';
-        } else if (retire != null) {
-            ele1.innerHTML =
-                '<div>'+
-                '<div><span>研究成員</span><p>' + text + '</p></div>' +
-                '<div><span>兼任退休教授</span><p>' + retire + '</p></div>'+
-                '</div>';
-        } else {
-            ele1.innerHTML =
-                '<div>'+
-                '<div><span>研究成員</span><p>' + text + '</p></div>'+
-                '</div>';
-        }
+    //     if (chair != null && retire != null) {
+    //         ele1.innerHTML =
+    //             '<div>' +
+    //             '<div><span>研究成員</span><p>' + text + '</p></div>' +
+    //             '<div><span>兼任退休教授</span><p>' + retire + '</p></div>' +
+    //             '<div><span>講座教授</span><p>' + chair + '</p></div>' +
+    //             '</div>';
+    //     } else if (chair != null) {
+    //         ele1.innerHTML =
+    //             '<div>' +
+    //             '<div><span>研究成員</span><p>' + text + '</p></div>' +
+    //             '<div><span>講座教授</span><p>' + chair + '</p></div>' +
+    //             '</div>';
+    //     } else if (retire != null) {
+    //         ele1.innerHTML =
+    //             '<div>' +
+    //             '<div><span>研究成員</span><p>' + text + '</p></div>' +
+    //             '<div><span>兼任退休教授</span><p>' + retire + '</p></div>' +
+    //             '</div>';
+    //     } else {
+    //         ele1.innerHTML =
+    //             '<div>' +
+    //             '<div><span>研究成員</span><p>' + text + '</p></div>' +
+    //             '</div>';
+    //     }
 
 
-    });
+    // });
 
-    $('h2').each(function() {
+    $('h2').each(function () {
         let $this = $(this);
-        if($this.html().replace(/\s| /g, '').length == 0)
+        if ($this.html().replace(/\s| /g, '').length == 0)
             $this.remove();
     });
-    $('p').each(function() {
+    $('p').each(function () {
         let $this = $(this);
-        if($this.html().replace(/\s| /g, '').length == 0)
+        if ($this.html().replace(/\s| /g, '').length == 0)
             $this.remove();
     });
 
+    function check_h2_add_bg(element) {
+        if (element.innerText.includes('出國交換')) {
+            let img = new Image();
+            img.src = `${templateUrl}/images/student_abroad/cloud1.webp`;
+            element.outerHTML = `<div id='exchange' class='field_wrapper'>${element.outerHTML}${img.outerHTML}</div>`;
+        }
+        if (element.innerText.includes('出國短期')) {
+            let img = new Image();
+            img.src = `${templateUrl}/images/student_abroad/cloud2.webp`;
+            element.outerHTML = `<div id='short_term_program' class='field_wrapper'>${element.outerHTML}${img.outerHTML}</div>`;
+        }
+        if (element.innerText.includes('姊妹校短期')) {
+            let img = new Image();
+            img.src = `${templateUrl}/images/student_abroad/cloud3.webp`;
+            element.outerHTML = `<div id='short_term_course' class='field_wrapper'>${element.outerHTML}${img.outerHTML}</div>`;
+        }
+        if (element.innerText.includes('海外實習')) {
+            let img = new Image();
+            img.src = `${templateUrl}/images/student_abroad/cloud4.webp`;
+            element.outerHTML = `<div id='overseas' class='field_wrapper'>${element.outerHTML}${img.outerHTML}</div>`;
+        }
+        if (element.innerText.includes('雙聯學位')) {
+            let img = new Image();
+            img.src = `${templateUrl}/images/student_abroad/cloud5.webp`;
+            element.outerHTML = `<div id='dual_degree' class='field_wrapper'>${element.outerHTML}${img.outerHTML}</div>`;
+        }
+        if (element.innerText.includes('國外校際')) {
+            let img = new Image();
+            img.src = `${templateUrl}/images/student_abroad/cloud6.webp`;
+            element.outerHTML = `<div id='virtual' class='field_wrapper'>${element.outerHTML}${img.outerHTML}</div>`;
+        }
+    }
 
+    let first_h2_p = true;
     let h2 = document.querySelectorAll("h2");
     h2.forEach(element => {
-        console.log(element);
-        console.log(element.nextElementSibling.tagName);
+        // console.log(element);
+        // console.log(element.nextElementSibling.tagName);
         if (element.nextElementSibling.tagName == "P") {
-
+            if (first_h2_p) {
+                let fragment = document.createDocumentFragment();
+                fragment.appendChild(element.nextElementSibling);
+                element.appendChild(fragment);
+                first_h2_p = false;
+            }
         }
-        if(element.innerText.includes('出國交換')){
-            let img = new Image();
-            img.src = templateUrl+"/images/student_abroad/cloud1.webp";
-            element.outerHTML = "<div id='exchange' class='field_wrapper'>"+element.outerHTML+img.outerHTML+"</div>";
-        }
-        if(element.innerText.includes('出國短期')){
-            let img = new Image();
-            img.src = templateUrl+"/images/student_abroad/cloud2.webp";
-            element.outerHTML = "<div id='short_term_program' class='field_wrapper'>"+element.outerHTML+img.outerHTML+"</div>";
-        }
-        if(element.innerText.includes('姊妹校短期')){
-            let img = new Image();
-            img.src = templateUrl+"/images/student_abroad/cloud3.webp";
-            element.outerHTML = "<div id='short_term_course' class='field_wrapper'>"+element.outerHTML+img.outerHTML+"</div>";
-        }
-        if(element.innerText.includes('海外實習')){
-            let img = new Image();
-            img.src = templateUrl+"/images/student_abroad/cloud4.webp";
-            element.outerHTML = "<div id='overseas' class='field_wrapper'>"+element.outerHTML+img.outerHTML+"</div>";
-        }
-        if(element.innerText.includes('雙聯學位')){
-            let img = new Image();
-            img.src = templateUrl+"/images/student_abroad/cloud5.webp";
-            element.outerHTML = "<div id='dual_degree' class='field_wrapper'>"+element.outerHTML+img.outerHTML+"</div>";
-        }
-        if(element.innerText.includes('國外校際')){
-            let img = new Image();
-            img.src = templateUrl+"/images/student_abroad/cloud6.webp";
-            element.outerHTML = "<div id='virtual' class='field_wrapper'>"+element.outerHTML+img.outerHTML+"</div>";
-        }
+        check_h2_add_bg(element);
     });
 
 });
-
+*/
 
 $(() => {
 
     const left_sbs = document.getElementsByClassName("left_sb_a");
     const depart_secs = document.getElementsByClassName("field_wrapper");
     let priv_dep = depart_secs[0].id;
+
+    // Array.from(depart_secs).forEach((el_c) => {
+    //     if (el_c.nextElementSibling.tagName == "P") {
+    //         let fragment = document.createDocumentFragment();
+    //         fragment.appendChild(el_c.nextElementSibling);
+    //         let div = document.createElement('div');
+    //         div.appendChild( fragment.cloneNode(true) );
+    //         el_c.outerHTML = `<div class='p_wrapper'>${el_c.outerHTML}${div.innerHTML}</div>`;
+    //     }
+    // });
 
 
     left_sbs[0].style.borderLeft = "solid 2px rgb(var(--dark))";
