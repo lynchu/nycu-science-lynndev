@@ -12,9 +12,9 @@ function theme_css_js() {
         //wp_enqueue_style('normalize', 'https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css', false, null, 'screen');
         wp_enqueue_style('normalize', get_template_directory_uri().'/css/modern-normalize.min.css', false, '1.1.0', 'screen');
     /* google fonts NotoSansTC */
-        //wp_enqueue_style('notosanstc', 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap', false );
+        wp_enqueue_style('notosanstc', 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap', false);
     /* font style */
-        wp_enqueue_style('font', get_template_directory_uri().'/css/font.css', array('normalize'), '2021051501', 'screen');
+        wp_enqueue_style('font', get_template_directory_uri().'/css/font.css', array('normalize', 'notosanstc'), '2021051501', 'screen');
     /* general style */
         wp_enqueue_style('general-css', get_template_directory_uri().'/css/general.css', 'font', '2021061701', 'screen');
     /* jQuery */
@@ -62,3 +62,45 @@ function theme_css_js() {
     }
 }
 add_action('wp_enqueue_scripts', 'theme_css_js');
+
+
+function add_async_attr_to_script( $tag, $handle, $src ) 
+{
+    $scriptArr = array();
+
+    if (in_array($handle, $scriptArr)) 
+    {
+        $tag = str_replace( 'src=', 'async src=', $tag );
+    }
+    return $tag;
+}
+//add_filter( 'script_loader_tag', 'add_async_attr_to_script', 10, 3 );
+
+
+function add_defer_attr_to_script( $tag, $handle, $src ) 
+{
+    $scriptArr = array();
+
+    if (in_array($handle, $scriptArr)) 
+    {
+        $tag = str_replace( 'src=', 'defer src=', $tag );
+    }
+    return $tag;
+}
+//add_filter( 'script_loader_tag', 'add_defer_attr_to_script', 10, 3 );
+
+function make_stylesheet_async( $html, $handle, $href, $media )
+{
+    $styleArr = array('notosanstc');
+    if(in_array($handle, $styleArr))
+    {
+        return str_replace('media=\''.$media.'\'', 'media="print" onload="this.media=\''.$media.'\'"', $html);
+    }
+    else
+    {
+        return $html;
+    }
+}
+add_filter( 'style_loader_tag', 'make_stylesheet_async', 10, 4);
+
+
