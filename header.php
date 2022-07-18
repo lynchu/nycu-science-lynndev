@@ -18,7 +18,7 @@
                 <nav id="navbar">
                     
                         <div class="logo_title">
-                        <a href="<?php echo site_url();?>">
+                        <a href="<?php echo site_url();?>/">
                             <img src="<?php echo get_template_directory_uri()?>/images/logo.svg" alt="">
                             <img src="<?php echo get_template_directory_uri()?>/images/title.svg" alt="">
                         </a>
