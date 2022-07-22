@@ -36,12 +36,12 @@
 ?>
         <div class="year">
             <?php
-                echo $date_arr[0]
+                echo $date_arr[0];
             ?>
         </div>
         <div class="day">
             <?php
-                echo $date_arr[1].".". $date_arr[2]
+                echo $date_arr[1].".". $date_arr[2];
             ?>
         </div>
         </div>

@@ -29,11 +29,12 @@
         <div class="rf-form_list_block news_list">
 
 <?php
+            $paged = get_query_var( 'paged', 1 ); 
             $args = array(
                 'post_type' => 'any',
                 'category_name' => $cat_slug,
-                //'posts_per_page' => 3,
-                'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
+                'posts_per_page' => get_option('posts_per_page'),
+                'paged' => $paged,
             );
 
             $query = new WP_Query($args);
@@ -55,7 +56,7 @@
 ?>
                 <div class="year">
                     <?php
-                        echo $date_arr[0].".".$date_arr[1].".".$date_arr[2]
+                        echo $date_arr[0].".".$date_arr[1].".".$date_arr[2];
                     ?>
                 </div>
                 </div>
@@ -78,9 +79,9 @@
             endif;
             wp_reset_postdata();
 ?>
-            <!-- <div class="pagenavi_container">
-            <?php //echo get_pagenavi($query); ?>
-            </div> -->
+            <div class="pagenavi_container">
+            <?php echo get_pagenavi($query); ?>
+            </div>
         </div>
 
 
