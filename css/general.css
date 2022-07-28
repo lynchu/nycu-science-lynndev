@@ -496,9 +496,24 @@ hr {
 .pagenavi_container {
     display: flex;
     justify-content: center;
-    padding: .5rem 0;
+    padding: 2rem 0;
 }
 
 .pagenavi {
     font-size: 1.375rem;
+}
+
+.page-numbers {
+    display: inline-block;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    color: gray;
+}
+
+.current {
+    color: rgb(var(--white));
+    background-color: rgb(var(--vivid-blue));
 }
