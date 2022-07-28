@@ -105,17 +105,3 @@
     <a href="<?php echo home_url().'/category/news/all/'; ?>">more</a>
 </div>
 </div>
-<script>
-
-    // if(window.matchMedia("(max-width: 1440px)").matches){
-    //     const len = 27;
-    //     const ellipsis = document.querySelectorAll('.post_title_news');
-    //     ellipsis.forEach((item) => {
-    //         if(item.innerHTML.length > len) {
-    //             let txt = item.innerHTML.substring(0, len) + '...';
-    //             item.innerHTML = txt;
-    //         }
-    //     })
-    // }
-
-</script>
