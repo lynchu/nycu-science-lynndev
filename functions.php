@@ -43,3 +43,11 @@ function new_excerpt_more($more) {
     return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+function set_cache_control()
+{
+    header('Cache-Control: max-age=31620000');
+}
+add_action( 'send_headers', 'set_cache_control' );
+
+
