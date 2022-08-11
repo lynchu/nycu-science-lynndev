@@ -278,18 +278,14 @@ get_header();
     }
     #timelines-all > tbody > tr:last-child > .decades-indicator::after
     {
-        color: #1A30FF;
+        border-radius: 0;
         top: 30px;
         left: calc(170px + 9%);
         width: 60px;
         height: 60px;
-        background-color: #F6F3EA;
-        border: 2px solid gray;
-        font-size: 50px;
-        line-height: 52px;
-        text-indent: 3.5px;
-        text-align: center;
-        content:"．";
+        background-color: transparent;
+        background-image: url("<?php echo get_template_directory_uri()?>/images/timelines/half-transparent-circle.webp");
+        background-size: cover;
     }
     #timelines-all
     {
