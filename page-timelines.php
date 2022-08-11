@@ -6,6 +6,7 @@ get_header();
     <img id="title-img" src="<?php echo get_template_directory_uri()?>/images/timelines/title.png" alt="">
     <h1 id="post-title">發展簡史</h1>
 </div>
+<div class="horizontal-divider"></div>
 <div id="post-content">
     <div id="vertical-dash">
         
@@ -370,6 +371,10 @@ get_header();
         margin-top: 10%;
         letter-spacing: 3px;
     }
+    #horizontal-divider
+    {
+        display: none;
+    }
     table tr td, table tr th
     {
         border: 0;
@@ -404,6 +409,63 @@ get_header();
         {
             top: 15px;
             left: calc(120px + 9%);
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        #post-title-area
+        {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 
+        }
+        #title-img
+        {
+            max-width: 50%;
+            margin-right: 0;
+        }
+        #post-title
+        {
+            margin-top: 5%;
+            letter-spacing: 6px;
+        }
+        #timelines-all
+        {
+            margin-top: 0;
+        }
+        #horizontal-divider
+        {
+            display: block;
+        }
+        #vertical-dash 
+        {
+            display: none;
+        }
+        .decades-indicator::after
+        {
+            display: none;
+        }
+        #timelines-all > tbody > tr:last-child > .decades-indicator::after
+        {
+            display: none;
+        }
+        #timelines-all > tbody > tr
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        #timelines-all > tbody > tr > td
+        {
+            padding-top: 0;
+            padding-left: 0;
+        }
+        #timelines-all>tbody>tr>th, #timelines-all>tbody>tr>td
+        {
+            border-bottom: 50px solid transparent;
+        }
+        .decades-indicator
+        {
+            text-align: center;
+            font-size: 3rem;
         }
     }
     
