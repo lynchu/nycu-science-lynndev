@@ -270,9 +270,9 @@ get_header();
     {
         position: absolute; /* 定位點是 #timelines-all>tbody>tr */
         top: 40px;
-        left: calc(180px + 9%);
-        width: 40px;
-        height: 40px;
+        left: calc(185px + 9%);
+        width: 30px;
+        height: 30px;
         background-color: #1A30FF;
         border-radius: 50%;
         content:"";
@@ -387,7 +387,7 @@ get_header();
         .decades-indicator::after
         {
             top: 35px;
-            left: calc(155px + 9%);
+            left: calc(160px + 9%);
         }
         #timelines-all > tbody > tr:last-child > .decades-indicator::after
         {
@@ -403,7 +403,7 @@ get_header();
         .decades-indicator::after
         {
             top: 25px;
-            left: calc(130px + 9%);
+            left: calc(135px + 9%);
         }
         #timelines-all > tbody > tr:last-child > .decades-indicator::after
         {
