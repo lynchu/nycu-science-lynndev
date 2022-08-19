@@ -34,7 +34,7 @@ while ( have_posts() ) : the_post();
         <div class="small_title">
         <h3>
         <p><strong>校級學期交換計畫</strong> </p>
-        <p><strong>University-level Semester Exchange</strong></p>
+        <!-- <p><strong>University-level Semester Exchange</strong></p> -->
         </h3>
         <img
         src="<?php echo get_template_directory_uri()?>/images/student_abroad/cloud0.webp">
@@ -58,7 +58,7 @@ while ( have_posts() ) : the_post();
         <div class="small_title">
         <h3>
         <p><strong>台聯大出國交換計畫 </strong></p>
-        <p><strong>UST Semester Exchange Program / <br>Summer</strong></p>
+        <!-- <p><strong>UST Semester Exchange Program / <br>Summer</strong></p> -->
         </h3>
         <img
         src="<?php echo get_template_directory_uri()?>/images/student_abroad/cloud0.webp">
@@ -88,7 +88,7 @@ while ( have_posts() ) : the_post();
         <div class="small_title">
         <h3>
         <p><strong>校級短期研究計畫 </strong></p>
-        <p><strong>University-level Short-term <br>Research Programs</strong></p>
+        <!-- <p><strong>University-level Short-term <br>Research Programs</strong></p> -->
         </h3>
         <img
         src="<?php echo get_template_directory_uri()?>/images/student_abroad/cloud0.webp">
@@ -110,7 +110,7 @@ while ( have_posts() ) : the_post();
         <div class="small_title">
         <h3>
         <p><strong>理學院實習研究計畫 </strong></p>
-        <p><strong>COS-MPI Internship Program</strong></p>
+        <!-- <p><strong>COS-MPI Internship Program</strong></p> -->
         </h3>
         <img
         src="<?php echo get_template_directory_uri()?>/images/student_abroad/cloud0.webp">
@@ -178,7 +178,7 @@ while ( have_posts() ) : the_post();
         <div class="small_title">
         <h3>
         <p><strong>校級雙聯學位計畫 </strong></p>
-        <p><strong>University-Level Dual Degree Programs</strong></p>
+        <!-- <p><strong>University-Level Dual Degree Programs</strong></p> -->
         </h3>
         <img
         src="<?php echo get_template_directory_uri()?>/images/student_abroad/cloud0.webp">
@@ -200,7 +200,7 @@ while ( have_posts() ) : the_post();
         <div class="small_title">
         <h3>
         <p><strong>理學院雙聯學位計畫　</strong></p>
-        <p><strong>COS Dual Degree Programs</strong></p>
+        <!-- <p><strong>COS Dual Degree Programs</strong></p> -->
         </h3>
         <img
         src="<?php echo get_template_directory_uri()?>/images/student_abroad/cloud0.webp">
