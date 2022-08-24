@@ -1,8 +1,6 @@
 <?php
 get_header();
 // Start the Loop
-while ( have_posts() ) : the_post();
-	$post_id = get_the_ID();
 ?>
 
 <div id="post-title-area">
@@ -70,7 +68,6 @@ while ( have_posts() ) : the_post();
     </p>
 </div>
 
-<?php endwhile; ?>
 <!-- End of the loop. -->
 <style>
     .subtitle h2
