@@ -30,10 +30,12 @@ require get_template_directory() . '/include/widgets/pagenavi.php';
  * 
  * source: https://wordpress.stackexchange.com/questions/155332/check-if-a-post-is-in-any-child-category-of-a-parent-category
  */
-function is_post_in_category( $category_ids, $post_id = null ) {
+function is_post_in_category( $category_slugs, $post_id = null ) {
+    $catObj = get_category_by_slug($category_slugs); 
+    $catId = $catObj->term_id;
     $args = array(
         'include'  => $post_id ?? get_the_ID(),
-        'category' => $category_ids,
+        'category' => $catId,
         'fields'   => 'ids',
     );
     return 0 < count( get_posts( $args ) );
@@ -50,4 +52,15 @@ function set_cache_control()
 }
 add_action( 'send_headers', 'set_cache_control' );
 
+/**
+ * print debug message to console
+ *  
+ * source: https://stackoverflow.com/questions/4323411/how-can-i-write-to-the-console-in-php
+ */
+function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
 
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}
