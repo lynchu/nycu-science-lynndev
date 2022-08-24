@@ -250,6 +250,7 @@ main {
 }
 
 .friend_link {
+    margin-left: auto;
     width: 35%;
     display: flex;
     justify-content: space-between;
