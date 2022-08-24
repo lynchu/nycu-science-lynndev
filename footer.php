@@ -22,15 +22,15 @@
             <br>
             <hr>
             <br>
+            <div class="friend_link">
+                <a href="https://www.nycu.edu.tw" target="_blank" rel="noreferrer noopener">NYCU</a>
+                <a href="<?php echo site_url();?>/privacy-policy/" target="_blank" rel="noreferrer noopener">隱私權政策</a>
+                <a href="<?php echo site_url();?>/open-information/" target="_blank" rel="noreferrer noopener">網站資料開放宣告</a>
+                <a href="https://www.nycu.edu.tw" target="_blank" rel="noreferrer noopener">網站導覽</a>
+            </div>
             <br>
             <div class="copyright">
                 <div class="copyright_content">&copy; <?php echo date('Y'); ?> College of Science, NYCU. All rights reserved.</div>
-                <div class="friend_link">
-                    <a href="https://www.nycu.edu.tw" target="_blank" rel="noreferrer noopener">NYCU</a>
-                    <a href="<?php echo site_url();?>/privacy-policy/" target="_blank" rel="noreferrer noopener">隱私權政策</a>
-                    <a href="<?php echo site_url();?>/open-information/" target="_blank" rel="noreferrer noopener">網站資料開放宣告</a>
-                    <a href="https://www.nycu.edu.tw" target="_blank" rel="noreferrer noopener">網站導覽</a>
-                </div>
             </div>
             <br>
         </div>
