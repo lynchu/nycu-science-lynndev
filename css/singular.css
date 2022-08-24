@@ -107,6 +107,18 @@ main h6 {
     background-color: rgb(var(--hr-gray));
 }
 
+.category-research_highlights figure
+{
+    margin-bottom: 80px;
+}
+
+.category-research_highlights figure figcaption
+{
+    font-size: 0.875rem;
+    text-align: center;
+    font-weight: bold;
+}
+
 @media (max-width: 767px) {
     main {
         padding: 75px calc(180/1920*100vw) 100px;
