@@ -10,6 +10,8 @@ require get_template_directory() . '/include/hooks/load_css_js.php';
 require get_template_directory() . '/include/hooks/restrict_restapi.php';
 require get_template_directory() . '/include/hooks/custom_post_type.php';
 require get_template_directory() . '/include/hooks/sidebar.php';
+require get_template_directory() . '/include/hooks/add_category_class.php';
+
 
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
