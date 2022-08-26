@@ -17,12 +17,12 @@
                 $link = wp_get_attachment_caption($slide);
                 if($link === ''):
 ?>
-            <img src="<?php echo wp_get_attachment_image_url($slide, 'large'); ?>" />
+            <img src="<?php echo wp_get_attachment_image_url($slide, ''); ?>" />
 <?php
                 else:
 ?>
             <a href="<?php echo $link; ?>">
-                <img src="<?php echo wp_get_attachment_image_url($slide, 'large'); ?>" />
+                <img src="<?php echo wp_get_attachment_image_url($slide, ''); ?>" />
             </a>
 <?php
                 endif;
