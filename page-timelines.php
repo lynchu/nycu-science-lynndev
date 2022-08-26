@@ -3,10 +3,9 @@ get_header();
 ?>
 
 <div id="post-title-area">
-    <img id="title-img" src="<?php echo get_template_directory_uri()?>/images/timelines/title.png" alt="">
+    <img id="title-img" src="<?php echo get_template_directory_uri()?>/images/timelines/title.webp" alt="">
     <h1 id="post-title">發展簡史</h1>
 </div>
-<div class="horizontal-divider"></div>
 <div id="post-content">
     <div id="vertical-dash">
         
@@ -368,7 +367,8 @@ get_header();
     }
     #post-title
     {
-        margin-top: 10%;
+        margin-top: auto;
+        margin-bottom: auto;
         letter-spacing: 3px;
     }
     #horizontal-divider
