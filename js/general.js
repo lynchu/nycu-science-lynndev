@@ -2,11 +2,11 @@
 
 $(() => {
     //wait for DOM load
-    const dropdowns = document.getElementsByClassName("sub-menu");
+    const dropdowns = document.getElementById("navbar").getElementsByClassName("sub-menu");
     const blocker = document.getElementById("blocker");
     const search_btn = document.getElementById("searchBtn");
     const searchform = document.getElementById("searchform");
-    const dropdown_btn = document.getElementsByClassName("menu-item-has-children");
+    const dropdown_btn = document.getElementById("navbar").getElementsByClassName("menu-item-has-children");
 
     $("#s").val("");
 
@@ -26,7 +26,7 @@ $(() => {
         let target = event.target;
         let targetParent = target.parentNode;
 
-        if (targetParent.matches(".menu-item-has-children")) {
+        if (targetParent.matches("#navbar .menu-item-has-children")) {
             if ($(window).width() > 800) {
                 hidedropdowns();
                 targetParent.querySelector("ul.sub-menu").style.display = "flex";
