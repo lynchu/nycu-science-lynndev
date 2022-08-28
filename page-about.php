@@ -38,11 +38,11 @@ get_header();
             <img class="quotation-img" src="<?php echo get_template_directory_uri()?>/images/about/Cquote2_blue.svg" alt=""></img>
         </div>
     </div>
-    <img id="second-row-img" src="<?php echo get_template_directory_uri()?>/images/about/alt.jpg" alt=""></img>
+    <div id="second-row-img"></div>
 </div>
 
 <div class="flex-container" id="third-row">
-    <img id="third-row-img" src="<?php echo get_template_directory_uri()?>/images/about/3.png" alt=""></img>
+    <div id="third-row-img"></div>
     <div class="flex-container-vertical">
         <div class="subtitle">
             <h2>教育目標</h2>
@@ -67,9 +67,15 @@ get_header();
     在自我定位方面，鑒於“人文心、科技情”的教育理念，期望將科技與人文結合，創造一個多元與融合、深耕與前瞻的卓越學術環境，培育具有專業知識、人文關懷及國際視野的領導人才，對國家社會作出具體的貢獻。
     </p>
 </div>
+<div id="testing"></div>
 
 <!-- End of the loop. -->
 <style>
+    #testing
+    {
+        max-width: 24vw;
+        height: auto;
+    }
     .subtitle h2
     {
         font-size: 1.475rem;
@@ -160,16 +166,12 @@ get_header();
     {
         max-width: 24vw;
         height: auto;
-        border-radius: 50%;
-        border: 4px solid #1A30FF;
         margin-right: 7vw;
     }
     #third-row-img
     {
         max-width: 24vw;
         height: auto;
-        border-radius: 50%;
-        border: 4px solid #1A30FF;
         margin-left: 7vw;
     }
     @media only screen and (max-width: 767px)
@@ -194,27 +196,40 @@ get_header();
         }
         #second-row ul
         {
+            margin-left:auto;
+            margin-right: auto;
             width: auto;
+        }
+        #second-row, #third-row
+        {
+            margin-bottom: 50px;
+        }
+        #third-row
+        {
+            flex-direction: column-reverse;
         }
         #third-row p
         {
+            margin-left:auto;
+            margin-right: auto;
             width: 80vw;
+            margin-bottom: 50px;
         }
         .quote-flex-container
         {
+
+            justify-content: center;
             width: 100vw;
-            flex-direction: row;
-            justify-content: space-evenly;
         }
         .quotation-img
         {
-            max-width: 3.5vw;
-            height: auto;
-            padding-top: 30px;
+            display: none;
         }
         #second-row-img, #third-row-img
         {
-            display: none;
+            max-width: 60vw;
+            margin-right: 0;
+            margin-left: 0;
         }
     }
 

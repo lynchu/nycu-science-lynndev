@@ -35,6 +35,9 @@ function theme_css_js() {
     if (is_category( array('all', 'announcements', 'events', 'awards', 'sdgs') )){
         wp_enqueue_style('news', get_template_directory_uri().'/css/news.css', 'font', '2021012100', 'screen');
     }
+    if (is_category('research_highlights')){
+        wp_enqueue_style('research_highlights', get_template_directory_uri().'/css/research_highlights.css', 'font', '2021012100', 'screen');
+    }
     /* office member */
     if (is_post_type_archive('staff')) {
         wp_enqueue_style('staff', get_template_directory_uri().'/css/archive-staff.css', 'general-css', '2021022500', 'screen'); 
@@ -42,6 +45,11 @@ function theme_css_js() {
     /* departments */
     if (is_page('departments')) {
         wp_enqueue_script('depart-js', get_template_directory_uri().'/js/department.js', 'general-js', false, null);
+    }
+    /* about */
+    if (is_page('about')){
+        wp_enqueue_script('lottie', 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js', false, null);
+        wp_enqueue_script('about-js', get_template_directory_uri().'/js/about.js', array('jQuery', 'lottie'), false, null);
     }
     /* dean */
     if (is_post_type_archive('dean')) {
