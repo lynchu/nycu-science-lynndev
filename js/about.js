@@ -12,13 +12,13 @@ $(() => {
         /* ref: https://pjchender.blogspot.com/2017/03/svg-viewport-viewbox-zoomdrag.html */
         /* 
             in brief, this image is orignally 2000 * 2000
-            the attribute 1200 1200 means it only shows a part of this image
-            in which that part is a 1200 * 1200 square, which name ViewBox.
+            the attribute 1400 1400 means it only shows a part of this image
+            in which that part is a 1400 * 1400 square, which name ViewBox.
             The ViewBox is start from the Topleft corner in deafult
-            and 400 0 means it will move left 400px.
-            (in visual, this will show like the picture move 'right' 400px) 
+            and 300 0 means it will move right 300px.
+            (in visual, this will show like the picture move 'left' 300px) 
         */
-        viewBoxSize: '400 0 1200 1200',
+        viewBoxSize: '300 0 1400 1400',
     }
     });
 
@@ -31,7 +31,7 @@ $(() => {
         autoplay: true, // optional
         name: "Demo Animation", // optional
         rendererSettings: {
-            viewBoxSize: '0 700 1200 1200',
+            viewBoxSize: '-200 700 1400 1400',
         }
         });
 });

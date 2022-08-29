@@ -174,6 +174,11 @@ get_header();
         height: auto;
         margin-left: 7vw;
     }
+    #third-row-img > svg, #second-row-img > svg
+    {
+        border-radius: 50%;
+        border: 3px solid #1A30FF;
+    }
     @media only screen and (max-width: 767px)
     {
         .flex-container
