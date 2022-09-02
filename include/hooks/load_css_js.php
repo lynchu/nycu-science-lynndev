@@ -12,7 +12,7 @@ function theme_css_js() {
         //wp_enqueue_style('normalize', 'https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css', false, null, 'screen');
         wp_enqueue_style('normalize', get_template_directory_uri().'/css/modern-normalize.min.css', false, '1.1.0', 'screen');
     /* google fonts NotoSansTC */
-        wp_enqueue_style('notosanstc', 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap', false );
+        wp_enqueue_style('notosanstc', 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap', false);
     /* font style */
         wp_enqueue_style('font', get_template_directory_uri().'/css/font.css', array('normalize', 'notosanstc'), '2021051501', 'screen');
     /* general style */
@@ -35,6 +35,9 @@ function theme_css_js() {
     if (is_category( array('news', 'announcements', 'events', 'awards', 'sdgs') )){
         wp_enqueue_style('news', get_template_directory_uri().'/css/news.css', 'font', '2021012100', 'screen');
     }
+    if (is_category('research_highlights')){
+        wp_enqueue_style('research_highlights', get_template_directory_uri().'/css/research_highlights.css', 'font', '2021012100', 'screen');
+    }
     /* office member */
     if (is_post_type_archive('staff')) {
         wp_enqueue_style('staff', get_template_directory_uri().'/css/archive-staff.css', 'general-css', '2021022500', 'screen'); 
@@ -42,6 +45,11 @@ function theme_css_js() {
     /* departments */
     if (is_page('departments')) {
         wp_enqueue_script('depart-js', get_template_directory_uri().'/js/department.js', 'general-js', false, null);
+    }
+    /* about */
+    if (is_page('about')){
+        wp_enqueue_script('lottie', 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js', false, null);
+        wp_enqueue_script('about-js', get_template_directory_uri().'/js/about.js', array('jQuery', 'lottie'), false, null);
     }
     /* dean */
     if (is_post_type_archive('dean')) {
@@ -62,3 +70,45 @@ function theme_css_js() {
     }
 }
 add_action('wp_enqueue_scripts', 'theme_css_js');
+
+
+function add_async_attr_to_script( $tag, $handle, $src ) 
+{
+    $scriptArr = array();
+
+    if (in_array($handle, $scriptArr)) 
+    {
+        $tag = str_replace( 'src=', 'async src=', $tag );
+    }
+    return $tag;
+}
+//add_filter( 'script_loader_tag', 'add_async_attr_to_script', 10, 3 );
+
+
+function add_defer_attr_to_script( $tag, $handle, $src ) 
+{
+    $scriptArr = array();
+
+    if (in_array($handle, $scriptArr)) 
+    {
+        $tag = str_replace( 'src=', 'defer src=', $tag );
+    }
+    return $tag;
+}
+//add_filter( 'script_loader_tag', 'add_defer_attr_to_script', 10, 3 );
+
+function make_stylesheet_async( $html, $handle, $href, $media )
+{
+    $styleArr = array('notosanstc');
+    if(in_array($handle, $styleArr))
+    {
+        return str_replace('media=\''.$media.'\'', 'media="print" onload="this.media=\''.$media.'\'"', $html);
+    }
+    else
+    {
+        return $html;
+    }
+}
+add_filter( 'style_loader_tag', 'make_stylesheet_async', 10, 4);
+
+
